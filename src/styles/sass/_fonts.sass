@@ -1,0 +1,11 @@
+/* FONTS */
+$fonts: ('GothamRounded', 'GothamRounded+Light', normal, 300), ('GothamRounded', 'GothamRounded+Book', normal, normal), ('GothamRounded', 'GothamRounded+Bold', normal, bold), ('Macan-Stencil-Trial', 'Macan-Stencil-Trial-Regular', normal, normal), ('Macan-Stencil-Trial', 'Macan-Stencil-Trial-Thin', normal, 300)
+
+@each $fontName, $fontFileName, $fontStyle, $fontWeight in $fonts
+    @font-face
+        font-family: '#{$fontName}'
+        src: url('../../assets/fonts/#{$fontFileName}.eot')
+        src: url('../../assets/fonts/#{$fontFileName}.eot?#iefix') format('embedded-opentype'), url('../../assets/fonts/#{$fontFileName}.otf') format('otf'), url('../../assets/fonts/#{$fontFileName}.svg##{$fontFileName}') format('svg'), url('../../assets/fonts/#{$fontFileName}.ttf') format('truetype'), url('../../assets/fonts/#{$fontFileName}.woff') format('woff'), url('../../assets/fonts/#{$fontFileName}.woff2') format('woff2')
+        font-style: #{$fontStyle}
+        font-weight: #{$fontWeight}
+        text-rendering: optimizeLegibility
