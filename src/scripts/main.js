@@ -15,18 +15,84 @@ const browser_mobile =
     navigator.userAgent.toLowerCase()
   )
 
-let screenWidth = window.innerWidth > 0 ? window.innerWidth : screen.width
-const mobile = 767
+const getCurrentYear = () => new Date().getFullYear()
 
-const getCurrentYear = () => {
-  var currentDate = new Date();
-  var currentYear = currentDate.getFullYear();
+const getWindowUpset = () => screenWidth <= mobile ? -120 : 0
 
-  return currentYear;
+const onScroll = () =>  {
+  let scrollPosition = $(document).scrollTop() + navbarHeight
+  let headerHeight = $('header').height() - navbarHeight
+
+  $(window).scrollTop() > headerHeight && screenWidth > mobile
+    ? $('nav').addClass('scrolled')
+    : $('nav').removeClass('scrolled')
+
+  $('nav ul li a').each(function () {
+    const anchorHref = $(this).attr('href');
+    if (!anchorHref) {
+      return
+    }
+
+    const section = $(this).attr('href')
+    const refElement = $(section)
+
+    if (refElement.position().top <= scrollPosition && refElement.position().top + refElement.height() > scrollPosition) {
+      $('nav ul li a').removeClass('active')
+      $(this).addClass('active')
+      return
+    }
+
+    $(this).removeClass('active')
+  })
 }
 
-$(document).ready(() => {
+const hashValue = window.location.hash
+const mobile = 767
+const navbarHeight = 70
+
+let screenWidth = window.innerWidth > 0 ? window.innerWidth : screen.width
+
+$(function() {
+  // Watch scroll
+  $(document).on('scroll', onScroll)
+
+  // Navigation
+  $('nav ul li a').on('touchstart click', function() {
+    // Scroll
+    const section = $($(this).attr('href'))
+    if (!section) {
+      return
+    }
+
+    $(window).scrollTo(section, 1000, {
+      offset: getWindowUpset()
+    })
+  })
+
+  if (hashValue) {
+    const section = $(hashValue)
+    $(window).scrollTo(section, 1000, {
+      offset: getWindowUpset()
+    })
+  }
+
   // Footer | Current year
-  const currentYearElement = document.getElementById('current-year')
-  currentYearElement.innerText = getCurrentYear()
+  $('#current-year').text(getCurrentYear())
+})
+
+$(window).on('load', function () {
+  if (!hashValue) {
+    $(window).scrollTo(0, 250)
+  }
+
+  onScroll()
+})
+
+$(window).on('resize', function() {
+  setTimeout(function () {
+    screenWidth = window.innerWidth > 0 ? window.innerWidth : screen.width
+    if (screenWidth <= mobile) {
+      $('nav').removeClass('scrolled')
+    }
+  }, 500)
 })

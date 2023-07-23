@@ -59,10 +59,16 @@ a {
 }
 a:hover, a:focus {
   color: #314D69;
+  text-decoration: none;
 }
 
 p {
   margin: 0;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
 }
 
 .no-gutter.row,
@@ -75,6 +81,171 @@ p {
 .no-gutter > [class^=col-] {
   padding-left: 0;
   padding-right: 0;
+}
+
+/* HEADER */
+header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url("../../assets/images/hero.jpg") center/cover no-repeat;
+  transition: 0.5s ease;
+}
+header .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+header .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #FFF;
+}
+@media (min-width: 768px) and (max-width: 1080px) {
+  header .content {
+    max-width: 280px;
+  }
+}
+header .content h2 {
+  font-size: 70px;
+  margin-bottom: 15px;
+}
+@media (min-width: 768px) and (max-width: 1080px) {
+  header .content h2 {
+    font-size: 48px;
+  }
+}
+@media (max-width: 767px) {
+  header .content h2 {
+    font-size: 48px;
+  }
+}
+header .content p {
+  font-size: 16px;
+}
+@media (min-width: 768px) and (max-width: 1080px) {
+  header .content p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 767px) {
+  header .content p {
+    font-size: 14px;
+  }
+}
+header nav {
+  position: relative;
+}
+header nav .logo {
+  position: absolute;
+  left: 60px;
+  top: 60px;
+  width: 256px;
+  height: 68px;
+  background-image: url(../../assets/icons/logo.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) and (max-width: 1080px) {
+  header nav .logo {
+    left: 50%;
+    top: 130px;
+    transform: translateX(-50%);
+  }
+}
+@media (max-width: 767px) {
+  header nav .logo {
+    left: 50%;
+    top: 130px;
+    width: 188px;
+    height: 49px;
+    transform: translateX(-50%);
+  }
+}
+header nav .logo h1 {
+  text-indent: -9999px;
+}
+header nav ul {
+  display: flex;
+  width: 50%;
+  margin-top: 75px;
+  margin-right: 60px;
+  justify-content: space-between;
+  float: right;
+}
+@media (min-width: 768px) and (max-width: 1080px) {
+  header nav ul {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  header nav ul {
+    display: none;
+  }
+}
+header nav ul li {
+  list-style: none;
+}
+header nav ul li a {
+  color: #FFF;
+  font-weight: bold;
+}
+header nav ul li a:hover, header nav ul li a:focus {
+  color: #FFF;
+  -webkit-text-decoration: #FFF;
+          text-decoration: #FFF;
+}
+header nav ul li a.active {
+  color: #5E6661;
+}
+header nav.scrolled {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  background-color: #C8A98A;
+}
+header nav.scrolled .logo {
+  width: 224px;
+  height: 59px;
+  top: 6px;
+}
+header nav.scrolled ul {
+  margin-top: 20px;
+}
+header nav.scrolled ul li a {
+  font-size: 14px;
+}
+
+/* COMPANY */
+section#la-empresa {
+  background-color: #FFF;
+}
+
+/* SERVICES */
+section#servicios {
+  background-color: #C8A98A;
+}
+
+/* TEAM */
+section#equipo {
+  background-color: #FFF;
+}
+
+/* PROJECTS */
+section#proyectos {
+  background-color: #314D69;
+}
+
+/* CONTACT */
+section#contacto {
+  background-color: #FFF;
 }
 
 /* FOOTER */
@@ -102,8 +273,8 @@ footer a {
 }
 @media (max-width: 767px) {
   footer a {
-    width: 320px;
-    height: 84px;
+    width: 240px;
+    height: 68px;
     margin-bottom: 45px;
   }
 }
@@ -112,6 +283,6 @@ footer p, footer p > span {
 }
 @media (max-width: 767px) {
   footer p, footer p > span {
-    font-size: 14px;
+    font-size: 11px;
   }
 }/*# sourceMappingURL=main.css.map */

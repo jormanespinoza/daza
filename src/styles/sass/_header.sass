@@ -1,0 +1,120 @@
+/* HEADER */
+header
+    position: relative
+    width: 100%
+    height: 100vh
+    background: url('../../assets/images/hero.jpg') center/cover no-repeat
+    transition: $transition
+
+    .overlay
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background-color: rgba(0, 0, 0, 0.3)
+
+    .content
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        text-align: center
+        color: $fontSecondaryColor
+
+        +tablet
+            max-width: 280px
+
+        h2
+            font-size: $fontSize * 4 + 6
+            margin-bottom: 15px
+
+            +tablet
+                font-size: $fontSize * 3
+
+            +mobile
+                font-size: $fontSize * 3
+
+        p
+            font-size: $fontSize
+
+            +tablet
+                font-size: $fontSize - 2
+
+            +mobile
+                font-size: $fontSize - 2
+
+    nav
+        position: relative
+
+        .logo
+            position: absolute
+            left: 60px
+            top: 60px
+            width: 256px
+            height: 68px
+            background-image: url(../../assets/icons/logo.svg)
+            background-size: contain
+            background-repeat: no-repeat
+
+            +tablet
+                left: 50%
+                top: 130px
+                transform: translateX(-50%)
+
+            +mobile
+                left: 50%
+                top: 130px
+                width: 188px
+                height: 49px
+                transform: translateX(-50%)
+
+            h1
+                text-indent: -9999px
+
+        ul
+            display: flex
+            width: 50%
+            margin-top: 75px
+            margin-right: 60px
+            justify-content: space-between
+            float: right
+
+            +tablet
+                display: none
+
+            +mobile
+                display: none
+
+            li
+                list-style: none
+
+                a
+                    color: $fontSecondaryColor
+                    font-weight: bold
+
+                    &:hover,
+                    &:focus
+                        color: $fontSecondaryColor
+                        text-decoration: $fontSecondaryColor
+
+                    &.active
+                        color: $fontAccentColor
+
+        &.scrolled
+            position: fixed
+            top: 0
+            width: 100%
+            height: 70px
+            background-color: $primaryColor
+
+            .logo
+                width: 224px
+                height: 59px
+                top: 6px
+
+            ul
+                margin-top: 20px
+
+                li a
+                    font-size: $fontSize - 2
