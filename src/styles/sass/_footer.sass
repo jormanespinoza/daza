@@ -1,0 +1,31 @@
+/* FOOTER */
+footer
+    background-color: $primaryColor
+    color: $fontSecondaryColor
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 30px 60px
+
+    +mobile
+        flex-direction: column
+        padding: 75px 30px 45px
+
+    a
+        width: 224px
+        height: 59px
+        background-image: url(../../assets/icons/logo.svg)
+        background-size: contain
+        background-repeat: no-repeat
+        text-indent: -9999px
+
+        +mobile
+            width: 320px
+            height: 84px
+            margin-bottom: 45px
+
+    p
+        font-size: $fontSize - 4
+
+        +mobile
+            font-size: $fontSize - 2
