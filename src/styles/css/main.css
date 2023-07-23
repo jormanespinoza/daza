@@ -107,11 +107,11 @@ footer a {
     margin-bottom: 45px;
   }
 }
-footer p {
+footer p, footer p > span {
   font-size: 12px;
 }
 @media (max-width: 767px) {
-  footer p {
+  footer p, footer p > span {
     font-size: 14px;
   }
 }/*# sourceMappingURL=main.css.map */
