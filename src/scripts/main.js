@@ -23,7 +23,7 @@ const onScroll = () =>  {
   let scrollPosition = $(document).scrollTop() + navbarHeight
   let headerHeight = $('header').height() - navbarHeight
 
-  $(window).scrollTop() > headerHeight && screenWidth > mobile
+  $(window).scrollTop() > headerHeight / 2.5 && screenWidth > mobile
     ? $('nav').addClass('scrolled')
     : $('nav').removeClass('scrolled')
 
