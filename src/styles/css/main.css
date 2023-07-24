@@ -234,7 +234,7 @@ header nav.scrolled ul {
   margin-top: 20px;
 }
 header nav.scrolled ul li > a {
-  font-size: 12px;
+  font-size: 13px;
 }
 @media (min-width: 768px) and (max-width: 1080px) {
   header nav.scrolled {
