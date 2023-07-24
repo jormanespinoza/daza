@@ -10,14 +10,18 @@ const isMobile = (function (a) {
   )
 })(navigator.userAgent || navigator.vendor || window.opera)
 
-const browser_mobile =
+const browserMbbile =
   /android|webos|iphone|ipod|blackberry|iemobile|opera mini/i.test(
     navigator.userAgent.toLowerCase()
   )
 
+const hashValue = window.location.hash
+const mobile = 767
+const navbarHeight = 70
+
 const getCurrentYear = () => new Date().getFullYear()
 
-const getWindowUpset = () => screenWidth <= mobile ? -120 : 0
+const getWindowUpset = () => screenWidth <= mobile ? -120 : - navbarHeight
 
 const onScroll = () =>  {
   let scrollPosition = $(document).scrollTop() + navbarHeight
@@ -45,10 +49,6 @@ const onScroll = () =>  {
     $(this).removeClass('active')
   })
 }
-
-const hashValue = window.location.hash
-const mobile = 767
-const navbarHeight = 70
 
 let screenWidth = window.innerWidth > 0 ? window.innerWidth : screen.width
 

@@ -1,3 +1,68 @@
 /* COMPANY */
 section#la-empresa
     background-color: $secondaryColor
+    padding: 0 0 60px 60px
+
+    +mobile
+        padding: 60px 30px
+
+    .row
+        align-items: center
+
+    .title
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        margin-bottom: 30px
+
+        +mobile
+            margin-bottom: 15px
+
+        i
+            display: block
+            width: 60px
+            height: 1px
+            background-color: $tertiaryColor
+            background-image: url(../../assets/icons/line_lg.svg)
+            background-size: contain
+            background-repeat: no-repeat
+            margin-right: 10px
+            margin-top: -8px
+
+            +mobile
+                width: 29px
+                height: 1px
+                background-color: $tertiaryColor
+                background-image: url(../../assets/icons/line.svg)
+
+        h2
+            font-family: 'GothamRounded'
+            font-size: $fontSize - 3
+            color: $fontAccentColor
+            text-align: center
+
+            +mobile
+                text-align: left
+
+    h3
+        font-family: 'GothamRounded'
+        font-weight: bold
+        font-size: $fontSize * 2 + 6
+        margin-bottom: 30px
+
+        +tablet
+            font-size: $fontSize * 2
+
+        +mobile
+            font-size: $fontSize + 4
+            margin-bottom: 30px
+
+        +small-device
+            font-size: $fontSize * 2 - 10
+
+    p
+        font-size: $fontSize
+
+        +mobile
+            font-size: $fontSize - 4
+            margin-bottom: 30px

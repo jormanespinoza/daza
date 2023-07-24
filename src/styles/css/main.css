@@ -260,6 +260,87 @@ header nav.scrolled ul li > a {
 /* COMPANY */
 section#la-empresa {
   background-color: #FFF;
+  padding: 0 0 60px 60px;
+}
+@media (max-width: 767px) {
+  section#la-empresa {
+    padding: 60px 30px;
+  }
+}
+section#la-empresa .row {
+  align-items: center;
+}
+section#la-empresa .title {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 30px;
+}
+@media (max-width: 767px) {
+  section#la-empresa .title {
+    margin-bottom: 15px;
+  }
+}
+section#la-empresa .title i {
+  display: block;
+  width: 60px;
+  height: 1px;
+  background-color: #5E6661;
+  background-image: url(../../assets/icons/line_lg.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+  margin-top: -8px;
+}
+@media (max-width: 767px) {
+  section#la-empresa .title i {
+    width: 29px;
+    height: 1px;
+    background-color: #5E6661;
+    background-image: url(../../assets/icons/line.svg);
+  }
+}
+section#la-empresa .title h2 {
+  font-family: "GothamRounded";
+  font-size: 13px;
+  color: #5E6661;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  section#la-empresa .title h2 {
+    text-align: left;
+  }
+}
+section#la-empresa h3 {
+  font-family: "GothamRounded";
+  font-weight: bold;
+  font-size: 38px;
+  margin-bottom: 30px;
+}
+@media (min-width: 768px) and (max-width: 1080px) {
+  section#la-empresa h3 {
+    font-size: 32px;
+  }
+}
+@media (max-width: 767px) {
+  section#la-empresa h3 {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 320px) {
+  section#la-empresa h3 {
+    font-size: 22px;
+  }
+}
+section#la-empresa p {
+  font-size: 16px;
+}
+@media (max-width: 767px) {
+  section#la-empresa p {
+    font-size: 12px;
+    margin-bottom: 30px;
+  }
 }
 
 /* SERVICES */
@@ -284,6 +365,11 @@ section#contacto {
   max-width: 1400px;
   margin: 0 auto;
 }
+@media (max-width: 767px) {
+  section#contacto {
+    padding: 60px 30px 45px;
+  }
+}
 section#contacto .info:first-of-type {
   margin-bottom: 15px;
 }
@@ -295,16 +381,6 @@ section#contacto .info:first-of-type {
 @media (max-width: 767px) {
   section#contacto .info {
     margin-bottom: 30px;
-  }
-}
-@media (max-width: 767px) {
-  section#contacto {
-    padding: 60px;
-  }
-}
-@media (max-width: 320px) {
-  section#contacto {
-    padding: 30px;
   }
 }
 section#contacto .title {
