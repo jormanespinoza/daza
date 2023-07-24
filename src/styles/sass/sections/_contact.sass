@@ -1,3 +1,102 @@
 /* CONTACT */
 section#contacto
     background-color: $secondaryColor
+    padding: 80px 60px 100px 60px
+    max-width: 1400px
+    margin: 0 auto
+
+    .info
+
+        &:first-of-type
+            margin-bottom: 15px
+
+            +mobile
+                margin-bottom: 30px
+
+
+        +mobile
+             margin-bottom: 30px
+
+    +mobile
+        padding: 60px
+
+    +small-device
+        padding: 30px
+
+    .title
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-bottom: 80px
+
+        +mobile
+            justify-content: flex-start
+            margin-bottom: 15px
+
+        i
+            display: block
+            width: 29px
+            height: 1px
+            background-image: url(../../assets/icons/line.svg)
+            background-size: contain
+            background-repeat: no-repeat
+            margin-right: 10px
+            margin-top: -8px
+
+        h2
+            font-family: 'GothamRounded'
+            font-size: $fontSize - 3
+            color: $fontAccentColor
+            text-align: center
+
+            +mobile
+                text-align: left
+
+    h3
+        font-family: 'GothamRounded'
+        font-weight: bold
+        font-size: $fontSize * 2 + 6
+
+        +tablet
+            font-size: $fontSize * 2
+
+        +mobile
+            font-size: $fontSize * 2 - 4
+            margin-bottom: 30px
+
+        +small-device
+            font-size: $fontSize * 2 - 10
+
+    p
+        font-family: 'GothamRounded'
+        font-weight: bold
+
+    a
+        font-family: 'GothamRounded'
+        font-size: $fontSize - 2
+
+        &:hover
+            text-decoration: underline
+
+    ul
+        list-style: none
+        display: contents
+
+        li
+            display: inline-block
+
+            .icon
+                display: block
+                background-size: contain
+                background-repeat: no-repeat
+
+            .ig
+                width: 20px
+                height: 20px
+                background-image: url(../../assets/icons/icon_ig.svg)
+                margin-right: 10px
+
+            .ln
+                width: 21px
+                height: 20px
+                background-image: url(../../assets/icons/icon_ln.svg)
