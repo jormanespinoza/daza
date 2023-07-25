@@ -66,6 +66,43 @@ p {
   margin: 0;
 }
 
+section .title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+@media (max-width: 767px) {
+  section .title {
+    margin-bottom: 15px;
+  }
+}
+section .title i {
+  display: block;
+  width: 60px;
+  height: 1px;
+  background-color: #5E6661;
+  background-image: url(../../assets/icons/line_lg.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+  margin-top: -8px;
+}
+@media (max-width: 767px) {
+  section .title i {
+    width: 29px;
+    height: 1px;
+    background-color: #5E6661;
+    background-image: url(../../assets/icons/line.svg);
+  }
+}
+section .title h2 {
+  font-family: "GothamRounded";
+  font-size: 13px;
+  color: #5E6661;
+  text-align: center;
+}
+
 .no-gutter.row,
 .no-gutter.container,
 .no-gutter.container-fluid {
@@ -271,40 +308,7 @@ section#la-empresa .row {
   align-items: center;
 }
 section#la-empresa .title {
-  display: flex;
-  align-items: center;
   justify-content: flex-start;
-  margin-bottom: 30px;
-}
-@media (max-width: 767px) {
-  section#la-empresa .title {
-    margin-bottom: 15px;
-  }
-}
-section#la-empresa .title i {
-  display: block;
-  width: 60px;
-  height: 1px;
-  background-color: #5E6661;
-  background-image: url(../../assets/icons/line_lg.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  margin-right: 10px;
-  margin-top: -8px;
-}
-@media (max-width: 767px) {
-  section#la-empresa .title i {
-    width: 29px;
-    height: 1px;
-    background-color: #5E6661;
-    background-image: url(../../assets/icons/line.svg);
-  }
-}
-section#la-empresa .title h2 {
-  font-family: "GothamRounded";
-  font-size: 13px;
-  color: #5E6661;
-  text-align: center;
 }
 @media (max-width: 767px) {
   section#la-empresa .title h2 {
@@ -352,10 +356,21 @@ section#servicios {
 section#equipo {
   background-color: #FFF;
 }
+section#equipo .title {
+  justify-content: flex-start;
+}
+@media (max-width: 767px) {
+  section#equipo .title h2 {
+    text-align: left;
+  }
+}
 
 /* PROJECTS */
 section#proyectos {
   background-color: #314D69;
+}
+section#proyectos .title h2 {
+  color: #FFF;
 }
 
 /* CONTACT */
@@ -370,16 +385,16 @@ section#contacto {
     padding: 60px 30px 45px;
   }
 }
+@media (max-width: 767px) {
+  section#contacto .info {
+    margin-bottom: 30px;
+  }
+}
 section#contacto .info:first-of-type {
   margin-bottom: 15px;
 }
 @media (max-width: 767px) {
   section#contacto .info:first-of-type {
-    margin-bottom: 30px;
-  }
-}
-@media (max-width: 767px) {
-  section#contacto .info {
     margin-bottom: 30px;
   }
 }

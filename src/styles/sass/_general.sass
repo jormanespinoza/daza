@@ -23,6 +23,41 @@ a
 p
     margin: 0
 
+section
+
+    .title
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-bottom: 30px
+
+        +mobile
+            margin-bottom: 15px
+
+        i
+            display: block
+            width: 60px
+            height: 1px
+            background-color: $tertiaryColor
+            background-image: url(../../assets/icons/line_lg.svg)
+            background-size: contain
+            background-repeat: no-repeat
+            margin-right: 10px
+            margin-top: -8px
+
+            +mobile
+                width: 29px
+                height: 1px
+                background-color: $tertiaryColor
+                background-image: url(../../assets/icons/line.svg)
+
+        h2
+            font-family: 'GothamRounded'
+            font-size: $fontSize - 3
+            color: $fontAccentColor
+            text-align: center
+
+// Bootstrap
 .no-gutter.row,
 .no-gutter.container,
 .no-gutter.container-fluid
@@ -33,6 +68,7 @@ p
     padding-left: 0
     padding-right: 0
 
+// Custom
 .mobile-only
     display: none
 
