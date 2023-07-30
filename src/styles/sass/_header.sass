@@ -50,6 +50,12 @@ header
         width: 100%
         transition: $transition
 
+        +tablet
+            position: relative
+
+        +mobile
+            position: relative
+
         .logo
             position: absolute
             left: 60px
@@ -94,16 +100,60 @@ header
 
                 a
                     color: $fontSecondaryColor
-                    font-weight: bold
                     font-size: $fontSize - 3
 
                     &:hover,
                     &:focus
                         color: $fontSecondaryColor
                         text-decoration: $fontSecondaryColor
+                        font-weight: bold
 
                     &.active
-                        color: $fontAccentColor
+                        font-weight: bold
+
+        p
+            display: none
+
+        .btn-menu-open
+            background-color: transparent
+            cursor: pointer
+            position: fixed
+            right: 15px
+            top: 140px
+            width: 40px
+            padding: 10px
+            border-radius: 5px
+            display: none
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            transition: $transition
+
+            +mobile
+                display: flex
+
+            span
+                background-color: $fontSecondaryColor
+                display: block
+                margin-bottom: 10px
+                height: 1px
+                transition: $transition
+                width: 30px
+
+                &:last-of-type
+                    margin-bottom: 0
+
+            &.btn-menu-close
+
+                span
+
+                    &:nth-of-type(1)
+                        transform: rotate(40deg)
+                        transform-origin: 13px 0
+
+                    &:nth-of-type(2)
+                        transform: rotate(-40deg)
+                        transform-origin: 0 0
 
         &.scrolled
             height: 70px
@@ -126,8 +176,67 @@ header
             +mobile
                 background-color: transparent
 
-        +tablet
-            position: relative
+            .btn-menu-open
+                background-color: $primaryColor
+                top: 15px
+                right: 15px
 
-        +mobile
-            position: relative
+        &.open-mobile
+            background-color: $primaryColor
+            height: 100vh
+            top: 0
+            position: fixed
+            width: 100%
+
+            .logo
+                left: 50%
+                top: 130px
+                width: 188px
+                height: 49px
+                transform: translateX(-50%)
+
+            .btn-menu-open
+                top: 140px
+
+            ul
+                display: block
+                position: absolute
+                left: 50%
+                top: 50%
+                transform: translate(-50%, -50%)
+                margin: 0
+                padding: 0
+
+                li
+                    display: block
+                    margin-right: 0
+                    text-align: center
+
+                    &.logo-nav
+                        display: none
+
+                    &:last-of-type
+                        margin-bottom: 0
+
+                    +mobile
+                        margin-bottom: 30px
+
+                    a
+                        font-size: $fontSize + 2
+                        text-align: center
+
+                        &:hover,
+                        &.active
+                            font-weight: bold
+
+            p
+                +mobile
+                    position: absolute
+                    width: 100%
+                    bottom: 130px
+                    left: 50%
+                    display: block
+                    text-align: center
+                    transform: translateX(-50%)
+                    color: $fontSecondaryColor
+                    font-weight: 300

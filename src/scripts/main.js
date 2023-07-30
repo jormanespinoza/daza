@@ -23,13 +23,24 @@ const getCurrentYear = () => new Date().getFullYear()
 
 const getWindowUpset = () => screenWidth <= mobile ? -120 : - navbarHeight + 2
 
+const toggleMenu = (btn) =>{
+  btn.toggleClass('btn-menu-close')
+  $('nav').toggleClass('open-mobile')
+}
+
 const onScroll = () =>  {
   let scrollPosition = $(document).scrollTop() + navbarHeight
   let headerHeight = $('header').height() - navbarHeight
 
-  $(window).scrollTop() > headerHeight / 2.5 && screenWidth > mobile
-    ? $('nav').addClass('scrolled')
-    : $('nav').removeClass('scrolled')
+  if (screenWidth > mobile) {
+    $(window).scrollTop() > headerHeight / 2.5
+      ? $('nav').addClass('scrolled')
+      : $('nav').removeClass('scrolled')
+  } else {
+    $(window).scrollTop() > headerHeight
+      ? $('nav').addClass('scrolled')
+      : $('nav').removeClass('scrolled')
+  }
 
   $('nav ul li a').each(function () {
     const anchorHref = $(this).attr('href');
@@ -59,7 +70,21 @@ $(function() {
   $(document).on('scroll', onScroll)
 
   // Navigation
+  $('.btn-menu-open').click(function () {
+    toggleMenu($(this))
+  })
+
+  $('.btn-menu-close').click(function () {
+    toggleMenu($(this))
+  })
+
   $('nav ul li a, .go-to').on('touchstart click', function() {
+    if (screenWidth <= mobile) {
+      setTimeout(function () {
+        $('.btn-menu-close').trigger('click')
+      }, 250)
+    }
+
     // Scroll
     const section = $($(this).attr('href'))
     if (!section) {
@@ -79,7 +104,7 @@ $(function() {
   }
 
   // Footer | Current year
-  $('#current-year').text(getCurrentYear())
+  $('.current-year').text(getCurrentYear())
 })
 
 $(window).on('load', function () {
