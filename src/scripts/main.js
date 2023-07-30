@@ -26,6 +26,7 @@ const getWindowUpset = () => screenWidth <= mobile ? -120 : - navbarHeight + 2
 const toggleMenu = (btn) =>{
   btn.toggleClass('btn-menu-close')
   $('nav').toggleClass('open-mobile')
+  $('body').toggleClass('no-scroll')
 }
 
 const onScroll = () =>  {
