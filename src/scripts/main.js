@@ -83,10 +83,15 @@ $(function() {
 })
 
 $(window).on('load', function () {
+  // Loader
+  $('#loader').delay(1000).fadeOut('slow')
+
+  // Hash
   if (!hashValue) {
     $(window).scrollTo(0, 250)
   }
 
+  // Scroll
   onScroll()
 })
 

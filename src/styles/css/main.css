@@ -110,6 +110,7 @@ section .title h2 {
   margin-right: 0;
 }
 
+.no-gutter.container-fluid,
 .no-gutter > [class^=col-] {
   padding-left: 0;
   padding-right: 0;
@@ -131,6 +132,31 @@ section .title h2 {
   .desktop-only {
     display: none;
   }
+}
+
+/* LOADER */
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #C8A98A;
+  z-index: 9997;
+}
+#loader .wall {
+  background-color: #C8A98A;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: 9998;
+}
+#loader .logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
 }
 
 /* HEADER */
@@ -471,7 +497,7 @@ section#servicios .go-to {
 /* TEAM */
 section#equipo {
   background-color: #FFF;
-  padding: 60px;
+  padding: 80px 0;
 }
 section#equipo .title {
   justify-content: flex-start;
@@ -483,6 +509,9 @@ section#equipo .title {
 }
 section#equipo .member {
   align-items: center;
+}
+section#equipo .member:first-of-type {
+  margin-bottom: 60px;
 }
 section#equipo .member h3 {
   font-size: 32px;
