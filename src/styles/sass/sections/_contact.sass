@@ -1,12 +1,25 @@
 /* CONTACT */
 section#contacto
     background-color: $secondaryColor
-    padding: 80px 60px 100px 60px
-    max-width: 1400px
-    margin: 0 auto
+    padding: 60px
 
-    +mobile
-        padding: 60px 30px 45px
+    .title
+        justify-content: flex-start
+
+        +mobile
+            margin-bottom: 15px
+
+        h2
+
+            +mobile
+                text-align: left
+
+    .centralized
+        display: table
+        margin: 0 auto
+
+        +mobile
+            display: block
 
     .info
 
@@ -14,47 +27,28 @@ section#contacto
             margin-bottom: 30px
 
         &:first-of-type
-            margin-bottom: 15px
+            margin-bottom: 45px
 
             +mobile
                 margin-bottom: 30px
 
-    .title
-        display: flex
-        align-items: center
-        justify-content: center
-        margin-bottom: 80px
+        &:last-child
+            margin-bottom: 0
 
-        +mobile
-            justify-content: flex-start
-            margin-bottom: 15px
-
-        i
-            display: block
-            width: 29px
-            height: 1px
-            background-image: url(../../assets/icons/line.svg)
-            background-size: contain
-            background-repeat: no-repeat
-            margin-right: 10px
-            margin-top: -8px
-
-        h2
-            font-family: 'GothamRounded'
-            font-size: $fontSize - 3
-            color: $fontAccentColor
-            text-align: center
+        &.rrhh
+            display: flex
+            gap: 15px
 
             +mobile
-                text-align: left
+                margin-top: 30px
 
     h3
         font-family: 'GothamRounded'
         font-weight: bold
-        font-size: $fontSize * 2 + 6
+        font-size: $fontSize * 2 + 4
 
         +tablet
-            font-size: $fontSize * 2
+            font-size: $fontSize * 2 - 2
 
         +mobile
             font-size: $fontSize * 2 - 4
@@ -63,36 +57,30 @@ section#contacto
         +small-device
             font-size: $fontSize * 2 - 10
 
-    p
-        font-family: 'GothamRounded'
-        font-weight: bold
-
     a
         font-family: 'GothamRounded'
         font-size: $fontSize - 2
+        color: $fontDarkerColor
+
+        &.highlighted
+            color: $fontAccentColor
+            font-weight: bold
 
         &:hover
             text-decoration: underline
 
-    ul
-        list-style: none
-        display: contents
+    .icon
+        display: block
+        background-size: contain
+        background-repeat: no-repeat
 
-        li
-            display: inline-block
+        &.ig
+            width: 20px
+            height: 20px
+            background-image: url(../../assets/icons/icon_ig.svg)
+            margin-right: 10px
 
-            .icon
-                display: block
-                background-size: contain
-                background-repeat: no-repeat
-
-            .ig
-                width: 20px
-                height: 20px
-                background-image: url(../../assets/icons/icon_ig.svg)
-                margin-right: 10px
-
-            .ln
-                width: 21px
-                height: 20px
-                background-image: url(../../assets/icons/icon_ln.svg)
+        &.ln
+            width: 21px
+            height: 20px
+            background-image: url(../../assets/icons/icon_ln.svg)

@@ -50,14 +50,16 @@ const onScroll = () =>  {
   })
 }
 
-let screenWidth = window.innerWidth > 0 ? window.innerWidth : screen.width
+let screenWidth = window.innerWidth > 0
+  ? window.innerWidth 
+  : screen.width
 
 $(function() {
   // Watch scroll
   $(document).on('scroll', onScroll)
 
   // Navigation
-  $('nav ul li a').on('touchstart click', function() {
+  $('nav ul li a, .go-to').on('touchstart click', function() {
     // Scroll
     const section = $($(this).attr('href'))
     if (!section) {

@@ -1,6 +1,7 @@
 /* TEAM */
 section#equipo
     background-color: $secondaryColor
+    padding: 60px
 
     .title
         justify-content: flex-start
@@ -9,3 +10,28 @@ section#equipo
 
             +mobile
                 text-align: left
+
+    .member
+        align-items: center
+
+        h3
+            font-size: $fontSize * 2
+            font-weight: bold
+            margin-bottom: 10px
+
+        h4
+            font-size: $fontSize + 4
+
+        p
+            font-size: $fontSize - 1
+
+        .icon
+            display: block
+            background-size: contain
+            background-repeat: no-repeat
+            margin-top: 15px
+
+            &.ln
+                width: 16px
+                height: 15px
+                background-image: url(../../assets/icons/icon_ln.svg)

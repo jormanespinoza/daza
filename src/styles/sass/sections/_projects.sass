@@ -1,8 +1,64 @@
 /* PROJECTS */
 section#proyectos
     background-color: $accentColor
+    padding: 60px
 
     .title
+        margin-bottom: 0
 
         h2
             color: $fontSecondaryColor
+            margin-bottom: 60px
+
+    .project
+        background-color: $secondaryColor
+
+        .data
+            background-color: $accentColor
+            padding: 0 30px
+
+            .info
+                position: relative
+                background-color: $secondaryColor
+                max-width: 400px
+                margin: -40px auto 0
+                padding: 15px
+
+                h3
+                    font-size: $fontSize - 2
+                    font-weight: bold
+                    display: inline
+
+                a
+                    display: flex
+                    align-items: center
+
+                    &.address
+                        display: flex
+                        font-weight: 300
+                        font-size: $fontSize - 4
+                        color: $fontHighlightColor
+
+                    &.more
+                        font-size: $fontSize - 2
+                        font-weight: bold
+                        float: right
+                        color: $fontPrimaryColor
+                        line-height: 2
+
+                    i
+                        display: block
+                        background-size: contain
+                        background-repeat: no-repeat
+
+                        &.marker
+                            width: 12px
+                            height: 12px
+                            background-image: url(../../assets/icons/icon_marker.svg)
+                            margin-right: 5px
+
+                        &.arrow
+                            width: 12px
+                            height: 12px
+                            background-image: url(../../assets/icons/icon_arrow.svg)
+                            margin-left: 5px

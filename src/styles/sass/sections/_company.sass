@@ -1,41 +1,96 @@
 /* COMPANY */
 section#la-empresa
     background-color: $secondaryColor
-    padding: 0 0 60px 60px
 
-    +mobile
-        padding: 60px 30px
-
-    .row
+    .intro
         align-items: center
 
-    .title
-        justify-content: flex-start
+        .title
+            justify-content: flex-start
 
-        h2
+            h2
+
+                +mobile
+                    text-align: left
+
+        h3
+            font-weight: bold
+            font-size: $fontSize * 2 + 6
+            margin-bottom: 30px
+
+            +tablet
+                font-size: $fontSize * 2
 
             +mobile
-                text-align: left
+                font-size: $fontSize + 4
+                margin-bottom: 30px
 
-    h3
-        font-family: 'GothamRounded'
-        font-weight: bold
-        font-size: $fontSize * 2 + 6
-        margin-bottom: 30px
+            +small-device
+                font-size: $fontSize * 2 - 10
 
-        +tablet
-            font-size: $fontSize * 2
+        p
+            font-size: $fontSize
+            margin-bottom: 15px
 
-        +mobile
+            &:last-of-type
+                margin-bottom: 0
+
+            +mobile
+                font-size: $fontSize - 4
+
+    .content
+
+        h3
             font-size: $fontSize + 4
-            margin-bottom: 30px
+            font-weight: bold
+            text-align: center
+            margin-bottom: 60px
 
-        +small-device
-            font-size: $fontSize * 2 - 10
+        .values
+            background-color: $fourthColor
+            padding: 60px
 
-    p
-        font-size: $fontSize
+            +mobile
+                background-color: $accentColor
+                color: $fontSecondaryColor
 
-        +mobile
-            font-size: $fontSize - 4
-            margin-bottom: 30px
+            span
+                font-size: $fontSize - 3
+                color: $fontfourthColor
+
+            h4
+                font-size: $fontSize + 6
+                font-weight: bold
+
+            p
+                font-size: $fontSize - 2
+
+        .attributes
+            background-color: $fourthColor
+            padding: 60px
+
+            .centralized
+                margin: 0 auto
+
+            .icon
+                display: block
+                background-size: contain
+                background-repeat: no-repeat
+                margin: 0 auto 15px
+
+                &.family
+                    width: 48px
+                    height: 52px
+                    background-image: url(../../assets/icons/icon_family.svg)
+
+                &.buildings
+                    width: 68px
+                    height: 48px
+                    background-image: url(../../assets/icons/icon_buildings.png)
+
+            h4
+                font-size: $fontSize + 2
+                text-align: center
+
+                b
+                    font-size: $fontSize * 2 - 4
