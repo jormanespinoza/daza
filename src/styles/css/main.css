@@ -541,9 +541,16 @@ section#la-empresa .content .attributes h4 b {
 }
 
 /* SERVICES */
-section#servicios {
+section#servicios .row {
   background-color: #C8A98A;
-  padding: 60px;
+}
+section#servicios .row:first-of-type {
+  padding-top: 60px;
+}
+@media (max-width: 767px) {
+  section#servicios .row:last-of-type {
+    margin: 30px 0 0;
+  }
 }
 section#servicios .title {
   display: block;
@@ -598,7 +605,12 @@ section#servicios .icon.project-manager {
   height: 52px;
   background-image: url(../../assets/icons/icon_project_manager.svg);
 }
-section#servicios .go-to {
+@media (max-width: 767px) {
+  section#servicios .contact {
+    background-color: #FFF;
+  }
+}
+section#servicios .contact .go-to {
   display: table;
   margin: 30px auto 0;
   background-color: #FFF;
@@ -606,6 +618,12 @@ section#servicios .go-to {
   padding: 2px 20px;
   border-radius: 25px;
   box-shadow: rgba(0, 0, 0, 0.25) 0 4px 4px 0;
+}
+@media (max-width: 767px) {
+  section#servicios .contact .go-to {
+    background-color: #314D69;
+    color: #FFF;
+  }
 }
 
 /* TEAM */
@@ -615,6 +633,12 @@ section#equipo {
 }
 section#equipo .title {
   justify-content: flex-start;
+}
+@media (max-width: 767px) {
+  section#equipo .title {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
 }
 @media (max-width: 767px) {
   section#equipo .title h2 {

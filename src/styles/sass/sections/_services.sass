@@ -1,7 +1,15 @@
 /* SERVICES */
 section#servicios
-    background-color: $primaryColor
-    padding: 60px
+
+    .row
+        background-color: $primaryColor
+
+        &:first-of-type
+            padding-top: 60px
+
+        &:last-of-type
+            +mobile
+                margin: 30px 0 0
 
     .title
         display: block
@@ -56,11 +64,20 @@ section#servicios
             height: 52px
             background-image: url(../../assets/icons/icon_project_manager.svg)
 
-    .go-to
-        display: table
-        margin: 30px auto 0
-        background-color: $secondaryColor
-        color: $fontHighlightColor
-        padding: 2px 20px
-        border-radius: 25px
-        box-shadow: rgba(0, 0, 0, 0.25) 0 4px 4px 0
+    .contact
+
+        +mobile
+            background-color: $secondaryColor
+
+        .go-to
+            display: table
+            margin: 30px auto 0
+            background-color: $secondaryColor
+            color: $fontHighlightColor
+            padding: 2px 20px
+            border-radius: 25px
+            box-shadow: rgba(0, 0, 0, 0.25) 0 4px 4px 0
+
+            +mobile
+                background-color: $accentColor
+                color: $fontSecondaryColor
