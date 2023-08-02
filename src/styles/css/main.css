@@ -440,6 +440,7 @@ section#la-empresa {
 }
 section#la-empresa .intro {
   align-items: center;
+  margin-left: 90px;
 }
 section#la-empresa .intro .title {
   justify-content: flex-start;
@@ -490,7 +491,7 @@ section#la-empresa .content h3 {
 }
 section#la-empresa .content .values {
   background-color: #E5E5E5;
-  padding: 60px;
+  padding: 90px;
 }
 @media (max-width: 767px) {
   section#la-empresa .content .values {
@@ -511,7 +512,7 @@ section#la-empresa .content .values p {
 }
 section#la-empresa .content .attributes {
   background-color: #E5E5E5;
-  padding: 60px;
+  padding: 90px;
 }
 section#la-empresa .content .attributes .centralized {
   margin: 0 auto;
@@ -541,11 +542,12 @@ section#la-empresa .content .attributes h4 b {
 }
 
 /* SERVICES */
+section#servicios .services {
+  background-color: #C8A98A;
+  padding: 90px;
+}
 section#servicios .row {
   background-color: #C8A98A;
-}
-section#servicios .row:first-of-type {
-  padding-top: 60px;
 }
 @media (max-width: 767px) {
   section#servicios .row:last-of-type {
@@ -557,7 +559,7 @@ section#servicios .title {
 }
 section#servicios .title h2 {
   color: #FFF;
-  margin-bottom: 60px;
+  margin-bottom: 90px;
 }
 section#servicios .item {
   margin-bottom: 30px;
@@ -629,7 +631,7 @@ section#servicios .contact .go-to {
 /* TEAM */
 section#equipo {
   background-color: #FFF;
-  padding: 80px 0;
+  padding: 90px;
 }
 section#equipo .title {
   justify-content: flex-start;
@@ -677,14 +679,14 @@ section#equipo .member .icon.ln {
 /* PROJECTS */
 section#proyectos {
   background-color: #314D69;
-  padding: 60px;
+  padding: 90px;
 }
 section#proyectos .title {
   margin-bottom: 0;
 }
 section#proyectos .title h2 {
   color: #FFF;
-  margin-bottom: 60px;
+  margin-bottom: 90px;
 }
 section#proyectos .project {
   background-color: #314D69;
@@ -748,7 +750,7 @@ section#proyectos .project .data .info a i.arrow {
 /* CONTACT */
 section#contacto {
   background-color: #FFF;
-  padding: 60px;
+  padding: 90px;
 }
 section#contacto .title {
   justify-content: flex-start;
