@@ -55,23 +55,28 @@ section#la-empresa
                 background-color: $accentColor
                 color: $fontSecondaryColor
 
-            span
-                font-size: $fontSize - 3
-                color: $fontfourthColor
+            .item
 
-            h4
-                font-size: $fontSize + 6
-                font-weight: bold
+                &:last-of-type
+                    margin-top: 30px
 
-            p
-                font-size: $fontSize - 2
+                span
+                    font-size: $fontSize - 3
+                    color: $fontfourthColor
+
+                h4
+                    font-size: $fontSize + 6
+                    font-weight: bold
+
+                p
+                    font-size: $fontSize - 2
 
         .attributes
             background-color: $fourthColor
             padding: 90px
 
             .centralized
-                margin: 0 auto
+                margin: 30px auto 0
 
             .icon
                 display: block

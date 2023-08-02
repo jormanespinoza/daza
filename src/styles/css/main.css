@@ -499,15 +499,18 @@ section#la-empresa .content .values {
     color: #FFF;
   }
 }
-section#la-empresa .content .values span {
+section#la-empresa .content .values .item:last-of-type {
+  margin-top: 30px;
+}
+section#la-empresa .content .values .item span {
   font-size: 13px;
   color: #C4C4C4;
 }
-section#la-empresa .content .values h4 {
+section#la-empresa .content .values .item h4 {
   font-size: 22px;
   font-weight: bold;
 }
-section#la-empresa .content .values p {
+section#la-empresa .content .values .item p {
   font-size: 14px;
 }
 section#la-empresa .content .attributes {
@@ -515,7 +518,7 @@ section#la-empresa .content .attributes {
   padding: 90px;
 }
 section#la-empresa .content .attributes .centralized {
-  margin: 0 auto;
+  margin: 30px auto 0;
 }
 section#la-empresa .content .attributes .icon {
   display: block;
