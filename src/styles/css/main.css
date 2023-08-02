@@ -687,7 +687,12 @@ section#proyectos .title h2 {
   margin-bottom: 60px;
 }
 section#proyectos .project {
-  background-color: #FFF;
+  background-color: #314D69;
+  margin: 0 auto;
+}
+section#proyectos .project img {
+  text-align: center;
+  margin: 0 auto;
 }
 section#proyectos .project .data {
   background-color: #314D69;
@@ -696,7 +701,7 @@ section#proyectos .project .data {
 section#proyectos .project .data .info {
   position: relative;
   background-color: #FFF;
-  max-width: 400px;
+  max-width: 300px;
   margin: -40px auto 0;
   padding: 15px;
 }
