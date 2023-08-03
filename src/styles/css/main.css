@@ -603,13 +603,32 @@ section#la-empresa .content .attributes h4 b {
 section#servicios .services {
   background-color: #C8A98A;
 }
-section#servicios .services .slider {
+section#servicios .services .slider-container {
   display: none;
+  position: relative;
+}
+@media (max-width: 767px) {
+  section#servicios .services .slider-container {
+    display: block;
+  }
+}
+section#servicios .services .slider-container .indicator {
+  position: absolute;
+  font-size: 13px;
+  font-weight: 300;
+  color: #FFF;
+  text-align: center;
+  left: 50%;
+  bottom: -60px;
+  transform: translateX(-50%);
+}
+section#servicios .services .slider-container .indicator .current {
+  font-weight: bold;
 }
 @media (max-width: 767px) {
   section#servicios .services .slider {
     display: flex;
-    margin-bottom: 60px;
+    margin-bottom: 120px;
   }
 }
 section#servicios .row {

@@ -63,7 +63,7 @@ const onScroll = () =>  {
 }
 
 const doServicesSlider = () => {
-  $('.services > .slider').slick({
+  $('.slider').slick({
     autoplay: true,
     arrows: true,
     speed: 500,
@@ -133,6 +133,11 @@ $(window).on('load', function () {
 
   // Services - Slider
   doServicesSlider()
+
+  // On swipe event
+  $('.slider').on('afterChange', function(event, slick, direction) {
+    $('.current').text(++direction)
+  })
 })
 
 $(window).on('resize', function() {

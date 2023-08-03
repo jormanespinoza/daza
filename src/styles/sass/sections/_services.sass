@@ -4,12 +4,31 @@ section#servicios
     .services
         background-color: $primaryColor
 
-        .slider
+        .slider-container
             display: none
+            position: relative
+
+            +mobile
+                display: block
+
+            .indicator
+                position: absolute
+                font-size: $fontSize - 3
+                font-weight: 300
+                color: $fontSecondaryColor
+                text-align: center
+                left: 50%
+                bottom: -60px
+                transform: translateX(-50%)
+
+                .current
+                    font-weight: bold
+
+        .slider
 
             +mobile
                 display: flex
-                margin-bottom: 60px
+                margin-bottom: 120px
 
     .row
         background-color: $primaryColor
