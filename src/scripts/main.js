@@ -62,6 +62,17 @@ const onScroll = () =>  {
   })
 }
 
+const doServicesSlider = () => {
+  $('.services > .slider').slick({
+    autoplay: true,
+    arrows: true,
+    speed: 500,
+    infinite: true,
+    pauseOnHover: true,
+    slidesToShow: 1
+  });
+}
+
 let screenWidth = window.innerWidth > 0
   ? window.innerWidth 
   : screen.width
@@ -119,6 +130,9 @@ $(window).on('load', function () {
 
   // Scroll
   onScroll()
+
+  // Services - Slider
+  doServicesSlider()
 })
 
 $(window).on('resize', function() {

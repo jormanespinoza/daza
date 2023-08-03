@@ -603,6 +603,15 @@ section#la-empresa .content .attributes h4 b {
 section#servicios .services {
   background-color: #C8A98A;
 }
+section#servicios .services .slider {
+  display: none;
+}
+@media (max-width: 767px) {
+  section#servicios .services .slider {
+    display: flex;
+    margin-bottom: 60px;
+  }
+}
 section#servicios .row {
   background-color: #C8A98A;
   padding-left: 90px;
@@ -629,6 +638,11 @@ section#servicios .row:last-child {
   section#servicios .row:last-child {
     padding-top: 60px;
     padding-bottom: 60px;
+  }
+}
+@media (max-width: 767px) {
+  section#servicios .row.items {
+    display: none;
   }
 }
 section#servicios .title {

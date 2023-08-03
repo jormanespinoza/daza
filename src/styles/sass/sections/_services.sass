@@ -4,6 +4,13 @@ section#servicios
     .services
         background-color: $primaryColor
 
+        .slider
+            display: none
+
+            +mobile
+                display: flex
+                margin-bottom: 60px
+
     .row
         background-color: $primaryColor
         padding-left: 90px
@@ -25,6 +32,11 @@ section#servicios
             +mobile
                 padding-top: 60px
                 padding-bottom: 60px
+
+        &.items
+
+            +mobile
+                display: none
 
     .title
         display: block
