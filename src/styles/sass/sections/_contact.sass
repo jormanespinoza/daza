@@ -3,6 +3,9 @@ section#contacto
     background-color: $secondaryColor
     padding: 90px
 
+    +mobile
+        padding: 60px 30px
+
     .title
         justify-content: flex-start
 
@@ -51,7 +54,7 @@ section#contacto
             font-size: $fontSize * 2 - 2
 
         +mobile
-            font-size: $fontSize * 2 - 4
+            font-size: $fontSize + 8
             margin-bottom: 30px
 
         +small-device
@@ -61,6 +64,9 @@ section#contacto
         font-family: 'GothamRounded'
         font-size: $fontSize - 2
         color: $fontDarkerColor
+
+        +mobile
+            font-size: $fontSize + 1
 
         &.highlighted
             color: $fontAccentColor

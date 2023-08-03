@@ -1,26 +1,21 @@
 // Mixins
-$small: 320px
-$mobile: 767px
-$tablet: 1080px
+$xs: 320
+$sm: 767
+$md: 992
+$lg: 1200
 
 =small-device
-    @media (max-width: #{$small})
+    @media (max-width: #{$xs}px)
         @content
 
 =mobile
-    @media (max-width: #{$mobile})
+    @media (max-width: #{$sm}px)
         @content
 
 =tablet
-    @media (min-width: 768px) and (max-width: #{$tablet})
+    @media (min-width: #{$sm + 1}px) and (max-width: #{$md}px)
         @content
 
-=placeholder
-    &::-webkit-input-placeholder
-        @content
-    &:-moz-placeholder
-        @content
-    &::-moz-placeholder
-        @content
-    &:-ms-input-placeholder
+=desktop
+    @media (min-width: #{$md + 1}px) and (max-width: #{$lg})
         @content

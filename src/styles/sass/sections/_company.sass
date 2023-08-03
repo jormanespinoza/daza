@@ -6,6 +6,10 @@ section#la-empresa
         align-items: center
         margin-left: 90px
 
+        +mobile
+            margin-left: 0
+            padding: 60px 30px
+
         .title
             justify-content: flex-start
 
@@ -47,6 +51,9 @@ section#la-empresa
             text-align: center
             margin-bottom: 60px
 
+            +mobile
+                margin-bottom: 30px
+
         .values
             background-color: $fourthColor
             padding: 90px
@@ -54,6 +61,8 @@ section#la-empresa
             +mobile
                 background-color: $accentColor
                 color: $fontSecondaryColor
+                font-size: $fontSize - 3
+                padding: 60px 30px
 
             .item
 
@@ -64,16 +73,28 @@ section#la-empresa
                     font-size: $fontSize - 3
                     color: $fontfourthColor
 
+                    +mobile
+                        font-size: $fontSize - 6
+
                 h4
                     font-size: $fontSize + 6
                     font-weight: bold
 
+                    +mobile
+                        font-size: $fontSize - 4
+
                 p
                     font-size: $fontSize - 2
+
+                    +mobile
+                        font-size: $fontSize - 4
 
         .attributes
             background-color: $fourthColor
             padding: 90px
+
+            +mobile
+                padding: 60px 60px
 
             .centralized
                 margin: 30px auto 0
@@ -87,16 +108,30 @@ section#la-empresa
                 &.family
                     width: 48px
                     height: 52px
-                    background-image: url(../../assets/icons/icon_family.svg)
+                    background-image: url(../../assets/icons/icon_family.png)
+
+                    +mobile
+                        width: 33px
+                        height: 35px
 
                 &.buildings
                     width: 68px
                     height: 48px
                     background-image: url(../../assets/icons/icon_buildings.png)
 
+                    +mobile
+                        width: 57px
+                        height: 35px
+
             h4
                 font-size: $fontSize + 2
                 text-align: center
 
+                +mobile
+                    font-size: $fontSize - 4
+
                 b
                     font-size: $fontSize * 2 - 4
+
+                    +mobile
+                        font-size: $fontSize + 4

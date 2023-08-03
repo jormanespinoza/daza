@@ -3,6 +3,9 @@ section#proyectos
     background-color: $accentColor
     padding: 90px
 
+    +mobile
+        padding: 60px 30px 45px
+
     .title
         margin-bottom: 0
 
@@ -10,9 +13,15 @@ section#proyectos
             color: $fontSecondaryColor
             margin-bottom: 90px
 
+            +mobile
+                margin-bottom: 60px
+
     .project
         background-color: $accentColor
         margin: 0 auto
+
+        +mobile
+            margin-bottom: 30px
 
         img
             text-align: center
@@ -34,6 +43,9 @@ section#proyectos
                     font-weight: bold
                     display: inline
 
+                    +mobile
+                        font-size: $fontSize - 4
+
                 a
                     display: flex
                     align-items: center
@@ -43,6 +55,10 @@ section#proyectos
                         font-weight: 300
                         font-size: $fontSize - 4
                         color: $fontHighlightColor
+                        width: 100%
+
+                        +mobile
+                            font-size: $fontSize - 5
 
                     &.more
                         font-size: $fontSize - 2
@@ -50,6 +66,9 @@ section#proyectos
                         float: right
                         color: $fontPrimaryColor
                         line-height: 2
+
+                        +mobile
+                            font-size: $fontSize - 4
 
                     i
                         display: block

@@ -21,7 +21,7 @@ const navbarHeight = 70
 
 const getCurrentYear = () => new Date().getFullYear()
 
-const getWindowUpset = () => screenWidth <= mobile ? -120 : - navbarHeight + 2
+const getWindowUpset = () => screenWidth <= mobile ? 0 : - navbarHeight + 2
 
 const toggleMenu = (btn) =>{
   btn.toggleClass('btn-menu-close')
