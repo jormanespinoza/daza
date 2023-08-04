@@ -973,12 +973,12 @@ section#equipo .member h4 {
 }
 @media (min-width: 768px) and (max-width: 992px) {
   section#equipo .member h4 {
-    font-size: 16px;
+    font-size: 19px;
   }
 }
 @media (max-width: 767px) {
   section#equipo .member h4 {
-    font-size: 14px;
+    font-size: 18px;
   }
 }
 section#equipo .member p {
@@ -1050,7 +1050,7 @@ section#proyectos .title h2 {
 }
 @media (max-width: 767px) {
   section#proyectos .title h2 {
-    margin-bottom: 60px;
+    margin-bottom: 30px;
   }
 }
 section#proyectos .project {
