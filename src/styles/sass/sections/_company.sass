@@ -6,6 +6,10 @@ section#la-empresa
         align-items: center
         margin-left: 90px
 
+        +tablet
+            margin-left: 0
+            padding: 60px 60px
+
         +mobile
             margin-left: 0
             padding: 60px 30px
@@ -51,12 +55,21 @@ section#la-empresa
             text-align: center
             margin-bottom: 60px
 
+            +tablet
+                margin-bottom: 30px
+
             +mobile
                 margin-bottom: 30px
 
         .values
             background-color: $fourthColor
             padding: 90px
+
+            +tablet
+                background-color: $accentColor
+                color: $fontSecondaryColor
+                font-size: $fontSize - 3
+                padding: 60px
 
             +mobile
                 background-color: $accentColor
@@ -93,8 +106,12 @@ section#la-empresa
             background-color: $fourthColor
             padding: 90px
 
+            +tablet
+                font-size: $fontSize - 3
+                padding: 60px
+
             +mobile
-                padding: 60px 60px
+                padding: 60px
 
             .centralized
                 margin: 30px auto 0

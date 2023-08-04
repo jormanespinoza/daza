@@ -3,8 +3,11 @@ section#proyectos
     background-color: $accentColor
     padding: 90px
 
-    +mobile
+    +tablet
         padding: 60px 30px 45px
+
+    +mobile
+        padding: 60px 30px 60px
 
     .title
         margin-bottom: 0
@@ -19,6 +22,9 @@ section#proyectos
     .project
         background-color: $accentColor
         margin: 0 auto
+
+        +tablet
+            margin-bottom: 60px
 
         +mobile
             margin-bottom: 30px

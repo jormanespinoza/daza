@@ -16,7 +16,7 @@ const browserMbbile =
   )
 
 const hashValue = window.location.hash
-const mobile = 767
+const mobile = 992
 const navbarHeight = 70
 
 const getCurrentYear = () => new Date().getFullYear()
@@ -62,8 +62,9 @@ const onScroll = () =>  {
   })
 }
 
+let $slider = $('.slider');
 const doServicesSlider = () => {
-  $('.slider').slick({
+  $slider.slick({
     autoplay: true,
     arrows: true,
     speed: 500,
@@ -71,6 +72,7 @@ const doServicesSlider = () => {
     pauseOnHover: true,
     slidesToShow: 1
   });
+  $('.current').text(1)
 }
 
 let screenWidth = window.innerWidth > 0
@@ -134,7 +136,6 @@ $(window).on('load', function () {
   // Services - Slider
   doServicesSlider()
 
-  // On swipe event
   $('.slider').on('afterChange', function(event, slick, direction) {
     $('.current').text(++direction)
   })
@@ -146,5 +147,9 @@ $(window).on('resize', function() {
     if (screenWidth <= mobile) {
       $('nav').removeClass('scrolled')
     }
+    if ($slider.hasClass('slick-initialized')) {
+      $slider.slick('unslick')
+    }
+    doServicesSlider()
   }, 500)
 })

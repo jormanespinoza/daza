@@ -4,6 +4,7 @@ $sm: 767
 $md: 992
 $lg: 1200
 
+
 =small-device
     @media (max-width: #{$xs}px)
         @content
@@ -18,4 +19,8 @@ $lg: 1200
 
 =desktop
     @media (min-width: #{$md + 1}px) and (max-width: #{$lg})
+        @content
+
+=minimum-height
+    @media (max-height: 600px)
         @content

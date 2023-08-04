@@ -169,6 +169,7 @@ header {
   position: relative;
   width: 100%;
   height: 100vh;
+  min-height: 600px;
   background: url("../../assets/images/hero.jpg") center/cover no-repeat;
   z-index: 1;
 }
@@ -317,6 +318,11 @@ header nav .btn-menu-open {
   justify-content: center;
   transition: 0.5s ease;
 }
+@media (min-width: 768px) and (max-width: 992px) {
+  header nav .btn-menu-open {
+    display: flex;
+  }
+}
 @media (max-width: 767px) {
   header nav .btn-menu-open {
     display: flex;
@@ -332,6 +338,11 @@ header nav .btn-menu-open span {
 }
 header nav .btn-menu-open span:last-of-type {
   margin-bottom: 0;
+}
+@media (max-height: 600px) {
+  header nav .btn-menu-open.btn-menu-close {
+    top: 30px;
+  }
 }
 header nav .btn-menu-open.btn-menu-close span:nth-of-type(1) {
   transform: rotate(40deg);
@@ -372,11 +383,12 @@ header nav.scrolled .btn-menu-open {
   right: 15px;
 }
 header nav.open-mobile {
-  background-color: #C8A98A;
-  height: 100vh;
-  top: 0;
   position: fixed;
+  top: 0;
+  background-color: #C8A98A;
   width: 100%;
+  height: 100vh;
+  z-index: 2;
 }
 header nav.open-mobile .logo {
   left: 50%;
@@ -385,8 +397,18 @@ header nav.open-mobile .logo {
   height: 49px;
   transform: translateX(-50%);
 }
+@media (max-height: 600px) {
+  header nav.open-mobile .logo {
+    top: 30px;
+  }
+}
 header nav.open-mobile .btn-menu-open {
   top: 140px;
+}
+@media (max-height: 600px) {
+  header nav.open-mobile .btn-menu-open {
+    top: 40px;
+  }
 }
 header nav.open-mobile ul {
   display: block;
@@ -408,29 +430,57 @@ header nav.open-mobile ul li.logo-nav {
 header nav.open-mobile ul li:last-of-type {
   margin-bottom: 0;
 }
+@media (min-width: 768px) and (max-width: 992px) {
+  header nav.open-mobile ul li {
+    margin-bottom: 30px;
+  }
+}
 @media (max-width: 767px) {
   header nav.open-mobile ul li {
     margin-bottom: 30px;
+  }
+}
+@media (max-height: 600px) {
+  header nav.open-mobile ul li {
+    margin-bottom: 15px;
   }
 }
 header nav.open-mobile ul li a {
   font-size: 18px;
   text-align: center;
 }
+@media (max-height: 600px) {
+  header nav.open-mobile ul li a {
+    font-size: 14px;
+  }
+}
 header nav.open-mobile ul li a:hover, header nav.open-mobile ul li a.active {
   font-weight: bold;
 }
+header nav.open-mobile p {
+  position: absolute;
+  width: 100%;
+  bottom: 130px;
+  left: 50%;
+  display: none;
+  text-align: center;
+  transform: translateX(-50%);
+  color: #FFF;
+  font-weight: 300;
+}
+@media (max-height: 600px) {
+  header nav.open-mobile p {
+    bottom: 30px;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  header nav.open-mobile p {
+    display: block;
+  }
+}
 @media (max-width: 767px) {
   header nav.open-mobile p {
-    position: absolute;
-    width: 100%;
-    bottom: 130px;
-    left: 50%;
     display: block;
-    text-align: center;
-    transform: translateX(-50%);
-    color: #FFF;
-    font-weight: 300;
   }
 }
 
@@ -441,6 +491,12 @@ section#la-empresa {
 section#la-empresa .intro {
   align-items: center;
   margin-left: 90px;
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  section#la-empresa .intro {
+    margin-left: 0;
+    padding: 60px 60px;
+  }
 }
 @media (max-width: 767px) {
   section#la-empresa .intro {
@@ -495,6 +551,11 @@ section#la-empresa .content h3 {
   text-align: center;
   margin-bottom: 60px;
 }
+@media (min-width: 768px) and (max-width: 992px) {
+  section#la-empresa .content h3 {
+    margin-bottom: 30px;
+  }
+}
 @media (max-width: 767px) {
   section#la-empresa .content h3 {
     margin-bottom: 30px;
@@ -503,6 +564,14 @@ section#la-empresa .content h3 {
 section#la-empresa .content .values {
   background-color: #E5E5E5;
   padding: 90px;
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  section#la-empresa .content .values {
+    background-color: #314D69;
+    color: #FFF;
+    font-size: 13px;
+    padding: 60px;
+  }
 }
 @media (max-width: 767px) {
   section#la-empresa .content .values {
@@ -545,9 +614,15 @@ section#la-empresa .content .attributes {
   background-color: #E5E5E5;
   padding: 90px;
 }
+@media (min-width: 768px) and (max-width: 992px) {
+  section#la-empresa .content .attributes {
+    font-size: 13px;
+    padding: 60px;
+  }
+}
 @media (max-width: 767px) {
   section#la-empresa .content .attributes {
-    padding: 60px 60px;
+    padding: 60px;
   }
 }
 section#la-empresa .content .attributes .centralized {
@@ -635,6 +710,12 @@ section#servicios .row {
   background-color: #C8A98A;
   padding-left: 90px;
   padding-right: 90px;
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  section#servicios .row {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
 }
 @media (max-width: 767px) {
   section#servicios .row {
@@ -766,6 +847,11 @@ section#equipo {
     padding: 60px;
   }
 }
+@media (min-width: 768px) and (max-width: 992px) {
+  section#equipo {
+    padding: 60px 90px;
+  }
+}
 @media (max-width: 767px) {
   section#equipo {
     padding: 0;
@@ -774,10 +860,21 @@ section#equipo {
 section#equipo .title {
   justify-content: flex-start;
 }
+@media (min-width: 768px) and (max-width: 992px) {
+  section#equipo .title {
+    justify-content: center;
+    margin-bottom: 45px;
+  }
+}
 @media (max-width: 767px) {
   section#equipo .title {
     justify-content: center;
     margin-bottom: 30px;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  section#equipo .title h2 {
+    text-align: left;
   }
 }
 @media (max-width: 767px) {
@@ -815,6 +912,11 @@ section#equipo .member:first-of-type {
 section#equipo .member .bio {
   position: relative;
 }
+@media (min-width: 768px) and (max-width: 992px) {
+  section#equipo .member .bio {
+    padding: 30px 50px;
+  }
+}
 @media (max-width: 767px) {
   section#equipo .member .bio {
     padding: 30px 50px;
@@ -831,6 +933,16 @@ section#equipo .member .bio .icon.vertical-line {
   top: -45px;
   left: 35px;
 }
+@media (min-width: 768px) and (max-width: 992px) {
+  section#equipo .member .bio .icon.vertical-line {
+    display: block;
+    left: 30px;
+    padding: 45px;
+    width: 3px;
+    height: 45px;
+    background-image: url(../../assets/icons/icon_vertical_line.svg);
+  }
+}
 @media (max-width: 767px) {
   section#equipo .member .bio .icon.vertical-line {
     display: block;
@@ -844,6 +956,12 @@ section#equipo .member h3 {
   font-weight: bold;
   margin-bottom: 10px;
 }
+@media (min-width: 768px) and (max-width: 992px) {
+  section#equipo .member h3 {
+    font-size: 26px;
+    margin-bottom: 5px;
+  }
+}
 @media (max-width: 767px) {
   section#equipo .member h3 {
     font-size: 20px;
@@ -853,6 +971,11 @@ section#equipo .member h3 {
 section#equipo .member h4 {
   font-size: 20px;
 }
+@media (min-width: 768px) and (max-width: 992px) {
+  section#equipo .member h4 {
+    font-size: 16px;
+  }
+}
 @media (max-width: 767px) {
   section#equipo .member h4 {
     font-size: 14px;
@@ -860,6 +983,11 @@ section#equipo .member h4 {
 }
 section#equipo .member p {
   font-size: 15px;
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  section#equipo .member p {
+    font-size: 14px;
+  }
 }
 @media (max-width: 767px) {
   section#equipo .member p {
@@ -881,6 +1009,14 @@ section#equipo .member .icon.ln {
 section#equipo .member .icon span {
   display: none;
 }
+@media (min-width: 768px) and (max-width: 992px) {
+  section#equipo .member .icon span {
+    display: flex;
+    font-size: 10px;
+    padding-left: 20px;
+    margin-top: 5px;
+  }
+}
 @media (max-width: 767px) {
   section#equipo .member .icon span {
     display: flex;
@@ -895,9 +1031,14 @@ section#proyectos {
   background-color: #314D69;
   padding: 90px;
 }
-@media (max-width: 767px) {
+@media (min-width: 768px) and (max-width: 992px) {
   section#proyectos {
     padding: 60px 30px 45px;
+  }
+}
+@media (max-width: 767px) {
+  section#proyectos {
+    padding: 60px 30px 60px;
   }
 }
 section#proyectos .title {
@@ -915,6 +1056,11 @@ section#proyectos .title h2 {
 section#proyectos .project {
   background-color: #314D69;
   margin: 0 auto;
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  section#proyectos .project {
+    margin-bottom: 60px;
+  }
 }
 @media (max-width: 767px) {
   section#proyectos .project {
@@ -997,6 +1143,11 @@ section#contacto {
   background-color: #FFF;
   padding: 90px;
 }
+@media (min-width: 768px) and (max-width: 992px) {
+  section#contacto {
+    padding: 60px;
+  }
+}
 @media (max-width: 767px) {
   section#contacto {
     padding: 60px 30px;
@@ -1056,7 +1207,7 @@ section#contacto h3 {
 }
 @media (min-width: 768px) and (max-width: 992px) {
   section#contacto h3 {
-    font-size: 30px;
+    font-size: 22px;
   }
 }
 @media (max-width: 767px) {

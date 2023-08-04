@@ -57,7 +57,7 @@
     left: 15px;
     width: 29px;
     height: 25px;
-    z-index: 98;
+    z-index: 0;
 }
 
 [dir='rtl'] .slick-prev:before {
@@ -73,7 +73,7 @@
     right: 15px;
     width: 29px;
     height: 57px;
-    z-index: 98;
+    z-index: 0;
 }
 
 [dir='rtl'] .slick-next {
