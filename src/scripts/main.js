@@ -65,9 +65,10 @@ const onScroll = () =>  {
 let $slider = $('.slider');
 const doServicesSlider = () => {
   $slider.slick({
-    autoplay: true,
+    autoplay: false,
     arrows: true,
     speed: 500,
+    lazyLoad: 'ondemand',
     infinite: true,
     pauseOnHover: true,
     slidesToShow: 1
