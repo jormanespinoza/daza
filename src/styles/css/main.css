@@ -1203,7 +1203,7 @@ section#contacto .info.rrhh {
 section#contacto h3 {
   font-family: "GothamRounded";
   font-weight: bold;
-  font-size: 36px;
+  font-size: 28px;
 }
 @media (min-width: 768px) and (max-width: 992px) {
   section#contacto h3 {
