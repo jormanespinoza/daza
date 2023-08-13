@@ -249,6 +249,7 @@ header nav .logo {
 }
 @media (min-width: 768px) and (max-width: 992px) {
   header nav .logo {
+    background-image: url(../../assets/icons/logo_light.svg);
     left: 50%;
     top: 130px;
     transform: translateX(-50%);
@@ -256,6 +257,7 @@ header nav .logo {
 }
 @media (max-width: 767px) {
   header nav .logo {
+    background-image: url(../../assets/icons/logo_light.svg);
     left: 50%;
     top: 130px;
     width: 188px;
@@ -339,10 +341,17 @@ header nav .btn-menu-open span {
 header nav .btn-menu-open span:last-of-type {
   margin-bottom: 0;
 }
+header nav .btn-menu-open.btn-menu-close {
+  right: 50%;
+  transform: translateX(50%);
+}
 @media (max-height: 600px) {
   header nav .btn-menu-open.btn-menu-close {
     top: 30px;
   }
+}
+header nav .btn-menu-open.btn-menu-close span {
+  background-color: #313131;
 }
 header nav .btn-menu-open.btn-menu-close span:nth-of-type(1) {
   transform: rotate(40deg);
@@ -378,24 +387,30 @@ header nav.scrolled ul li > a {
   }
 }
 header nav.scrolled .btn-menu-open {
-  background-color: #C8A98A;
+  background-color: #E5E5E5;
   top: 15px;
   right: 15px;
+}
+header nav.scrolled .btn-menu-open.btn-menu-close {
+  right: 50%;
+  transform: translateX(50%);
 }
 header nav.open-mobile {
   position: fixed;
   top: 0;
-  background-color: #C8A98A;
+  background-color: #E5E5E5;
   width: 100%;
   height: 100vh;
   z-index: 2;
 }
 header nav.open-mobile .logo {
   left: 50%;
-  top: 130px;
-  width: 188px;
-  height: 49px;
+  bottom: 0;
+  width: 100%;
+  height: auto;
   transform: translateX(-50%);
+  background-image: url(../../assets/icons/logo_min.svg);
+  background-position-y: bottom;
 }
 @media (max-height: 600px) {
   header nav.open-mobile .logo {
@@ -448,6 +463,7 @@ header nav.open-mobile ul li:last-of-type {
 header nav.open-mobile ul li a {
   font-size: 18px;
   text-align: center;
+  color: #313131;
 }
 @media (max-height: 600px) {
   header nav.open-mobile ul li a {
@@ -676,7 +692,7 @@ section#la-empresa .content .attributes h4 b {
 
 /* SERVICES */
 section#servicios .services {
-  background-color: #C8A98A;
+  background-color: #314D69;
 }
 section#servicios .services .slider-container {
   display: none;
@@ -707,7 +723,7 @@ section#servicios .services .slider-container .indicator .current {
   }
 }
 section#servicios .row {
-  background-color: #C8A98A;
+  background-color: #314D69;
   padding-left: 90px;
   padding-right: 90px;
 }
@@ -719,8 +735,8 @@ section#servicios .row {
 }
 @media (max-width: 767px) {
   section#servicios .row {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 45px;
+    padding-right: 45px;
   }
 }
 section#servicios .row:first-child {
@@ -736,8 +752,8 @@ section#servicios .row:last-child {
 }
 @media (max-width: 767px) {
   section#servicios .row:last-child {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 30px;
+    padding-bottom: 45px;
   }
 }
 @media (max-width: 767px) {
@@ -754,6 +770,7 @@ section#servicios .title h2 {
 }
 @media (max-width: 767px) {
   section#servicios .title h2 {
+    text-align: left;
     margin-bottom: 45px;
   }
 }
@@ -818,7 +835,7 @@ section#servicios .icon.project-manager {
 }
 @media (max-width: 767px) {
   section#servicios .contact {
-    background-color: #FFF;
+    background-color: #314D69;
   }
 }
 section#servicios .contact .go-to {
@@ -832,7 +849,7 @@ section#servicios .contact .go-to {
 }
 @media (max-width: 767px) {
   section#servicios .contact .go-to {
-    background-color: #314D69;
+    background-color: #C8A98A;
     color: #FFF;
   }
 }
