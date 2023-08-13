@@ -10,12 +10,35 @@ body
     overflow-x: hidden
     background-color: $secondaryColor
     color: $fontPrimaryColor
+    position: relative
 
     &.no-scroll
         height: 100vh
         width: 100vw
         overflow: hidden
 
+        .icon
+
+            &.whatsapp
+                display: none
+
+    .icon
+
+        &.whatsapp
+            display: none
+            background-image: url(../../assets/icons/icon_whatsapp.svg)
+            width: 55px
+            height: 55px
+            position: fixed
+            bottom: 15px
+            right: 15px
+            z-index: 1
+
+            +tablet
+                display: block
+
+            +mobile
+                display: block
 a
     color: $fontHighlightColor
     text-decoration: none

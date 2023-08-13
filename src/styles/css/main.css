@@ -51,11 +51,35 @@ body {
   overflow-x: hidden;
   background-color: #FFF;
   color: #313131;
+  position: relative;
 }
 body.no-scroll {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
+}
+body.no-scroll .icon.whatsapp {
+  display: none;
+}
+body .icon.whatsapp {
+  display: none;
+  background-image: url(../../assets/icons/icon_whatsapp.svg);
+  width: 55px;
+  height: 55px;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  z-index: 1;
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  body .icon.whatsapp {
+    display: block;
+  }
+}
+@media (max-width: 767px) {
+  body .icon.whatsapp {
+    display: block;
+  }
 }
 
 a {
@@ -266,6 +290,8 @@ header nav .logo {
 @media (min-width: 768px) and (max-width: 992px) {
   header nav .logo {
     background-image: url(../../assets/icons/logo_light.svg);
+    width: 243px;
+    height: 64px;
     left: 50%;
     top: calc(50vh - 24px);
     transform: translate(-50%, -50%);
@@ -276,8 +302,8 @@ header nav .logo {
     background-image: url(../../assets/icons/logo_light.svg);
     left: 50%;
     top: calc(50vh - 24px);
-    width: 188px;
-    height: 49px;
+    width: 243px;
+    height: 64px;
     transform: translate(-50%, -50%);
   }
 }
