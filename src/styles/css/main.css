@@ -107,6 +107,22 @@ section .title h2 {
   color: #5E6661;
   text-align: center;
 }
+section .go-to {
+  display: table;
+  margin: 0 auto;
+  background-color: #FFF;
+  color: #314D69;
+  padding: 2px 20px;
+  border-radius: 20px;
+}
+@media (max-width: 767px) {
+  section .go-to {
+    font-size: 11px;
+    background-color: #C8A98A;
+    color: #FFF;
+    padding: 7px 40px;
+  }
+}
 
 .no-gutter.row,
 .no-gutter.container,
@@ -150,7 +166,7 @@ section .title h2 {
   z-index: 9997;
 }
 #loader .wall {
-  background-color: #C8A98A;
+  background-color: #E5E5E5;
   position: absolute;
   height: 100vh;
   width: 100vw;
@@ -170,7 +186,7 @@ header {
   width: 100%;
   height: 100vh;
   min-height: 600px;
-  background: url("../../assets/images/hero.jpg") center/cover no-repeat;
+  background: url("../../assets/images/hero_mobile.jpg") center/cover no-repeat;
   z-index: 1;
 }
 header .overlay {
@@ -251,18 +267,18 @@ header nav .logo {
   header nav .logo {
     background-image: url(../../assets/icons/logo_light.svg);
     left: 50%;
-    top: 130px;
-    transform: translateX(-50%);
+    top: calc(50vh - 24px);
+    transform: translate(-50%, -50%);
   }
 }
 @media (max-width: 767px) {
   header nav .logo {
     background-image: url(../../assets/icons/logo_light.svg);
     left: 50%;
-    top: 130px;
+    top: calc(50vh - 24px);
     width: 188px;
     height: 49px;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
   }
 }
 header nav .logo h1 {
@@ -290,13 +306,12 @@ header nav ul li {
   list-style: none;
 }
 header nav ul li a {
-  color: #FFF;
+  color: #314D69;
   font-size: 13px;
 }
 header nav ul li a:hover, header nav ul li a:focus {
-  color: #FFF;
-  -webkit-text-decoration: #FFF;
-          text-decoration: #FFF;
+  color: #314D69;
+  text-decoration: none;
   font-weight: bold;
 }
 header nav ul li a.active {
@@ -309,16 +324,24 @@ header nav .btn-menu-open {
   background-color: transparent;
   cursor: pointer;
   position: fixed;
-  right: 15px;
-  top: 140px;
+  right: 50%;
+  top: 135px;
   width: 40px;
-  padding: 10px;
+  padding: 10px 8px 10px 11px;
   border-radius: 5px;
   display: none;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  transform: translateX(50%);
   transition: 0.5s ease;
+}
+header nav .btn-menu-open i {
+  width: 25px;
+  height: 15px;
+  background-image: url(../../assets/icons/icon_menu.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 @media (min-width: 768px) and (max-width: 992px) {
   header nav .btn-menu-open {
@@ -330,17 +353,6 @@ header nav .btn-menu-open {
     display: flex;
   }
 }
-header nav .btn-menu-open span {
-  background-color: #FFF;
-  display: block;
-  margin-bottom: 10px;
-  height: 1px;
-  transition: 0.5s ease;
-  width: 30px;
-}
-header nav .btn-menu-open span:last-of-type {
-  margin-bottom: 0;
-}
 header nav .btn-menu-open.btn-menu-close {
   right: 50%;
   transform: translateX(50%);
@@ -350,16 +362,12 @@ header nav .btn-menu-open.btn-menu-close {
     top: 30px;
   }
 }
-header nav .btn-menu-open.btn-menu-close span {
-  background-color: #313131;
-}
-header nav .btn-menu-open.btn-menu-close span:nth-of-type(1) {
-  transform: rotate(40deg);
-  transform-origin: 13px 0;
-}
-header nav .btn-menu-open.btn-menu-close span:nth-of-type(2) {
-  transform: rotate(-40deg);
-  transform-origin: 0 0;
+header nav .btn-menu-open.btn-menu-close i {
+  width: 23px;
+  height: 32px;
+  background-image: url(../../assets/icons/icon_x.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 header nav.scrolled {
   height: 70px;
@@ -389,7 +397,7 @@ header nav.scrolled ul li > a {
 header nav.scrolled .btn-menu-open {
   background-color: #E5E5E5;
   top: 15px;
-  right: 15px;
+  right: 30px;
 }
 header nav.scrolled .btn-menu-open.btn-menu-close {
   right: 50%;
@@ -403,17 +411,21 @@ header nav.open-mobile {
   height: 100vh;
   z-index: 2;
 }
-header nav.open-mobile .logo {
+header nav.open-mobile a.logo {
+  display: block;
+  top: unset;
   left: 50%;
   bottom: 0;
   width: 100%;
-  height: auto;
+  heaight: 0;
+  padding-bottom: 26.3157894737%;
   transform: translateX(-50%);
   background-image: url(../../assets/icons/logo_min.svg);
   background-position-y: bottom;
+  background-size: contain;
 }
 @media (max-height: 600px) {
-  header nav.open-mobile .logo {
+  header nav.open-mobile a.logo {
     top: 30px;
   }
 }
@@ -461,7 +473,7 @@ header nav.open-mobile ul li:last-of-type {
   }
 }
 header nav.open-mobile ul li a {
-  font-size: 18px;
+  font-size: 26px;
   text-align: center;
   color: #313131;
 }
@@ -517,7 +529,7 @@ section#la-empresa .intro {
 @media (max-width: 767px) {
   section#la-empresa .intro {
     margin-left: 0;
-    padding: 60px 30px;
+    padding: 60px 30px 45px;
   }
 }
 section#la-empresa .intro .title {
@@ -531,17 +543,19 @@ section#la-empresa .intro .title {
 section#la-empresa .intro h3 {
   font-weight: bold;
   font-size: 38px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 @media (min-width: 768px) and (max-width: 992px) {
   section#la-empresa .intro h3 {
     font-size: 32px;
+    color: #CAAD8E;
   }
 }
 @media (max-width: 767px) {
   section#la-empresa .intro h3 {
-    font-size: 20px;
-    margin-bottom: 30px;
+    font-size: 30px;
+    color: #CAAD8E;
+    font-weight: normal;
   }
 }
 @media (max-width: 320px) {
@@ -551,14 +565,21 @@ section#la-empresa .intro h3 {
 }
 section#la-empresa .intro p {
   font-size: 16px;
+  color: #313131;
+  opacity: 0.74;
   margin-bottom: 15px;
 }
+section#la-empresa .intro p:first-of-type {
+  font-size: 16px;
+  font-weight: bold;
+}
 section#la-empresa .intro p:last-of-type {
-  margin-bottom: 0;
+  font-size: 12px;
+  margin-bottom: 30px;
 }
 @media (max-width: 767px) {
   section#la-empresa .intro p {
-    font-size: 12px;
+    font-size: 11px;
   }
 }
 section#la-empresa .content h3 {
@@ -836,21 +857,6 @@ section#servicios .icon.project-manager {
 @media (max-width: 767px) {
   section#servicios .contact {
     background-color: #314D69;
-  }
-}
-section#servicios .contact .go-to {
-  display: table;
-  margin: 0 auto;
-  background-color: #FFF;
-  color: #314D69;
-  padding: 2px 20px;
-  border-radius: 25px;
-  box-shadow: rgba(0, 0, 0, 0.25) 0 4px 4px 0;
-}
-@media (max-width: 767px) {
-  section#servicios .contact .go-to {
-    background-color: #C8A98A;
-    color: #FFF;
   }
 }
 
@@ -1311,4 +1317,5 @@ footer a {
 footer p, footer p > span {
   color: #313131;
   font-size: 11px;
+  font-weight: bold;
 }/*# sourceMappingURL=main.css.map */

@@ -12,7 +12,7 @@ section#la-empresa
 
         +mobile
             margin-left: 0
-            padding: 60px 30px
+            padding: 60px 30px 45px
 
         .title
             justify-content: flex-start
@@ -25,27 +25,36 @@ section#la-empresa
         h3
             font-weight: bold
             font-size: $fontSize * 2 + 6
-            margin-bottom: 30px
+            margin-bottom: 15px
 
             +tablet
                 font-size: $fontSize * 2
+                color: $fontFifthColor
 
             +mobile
-                font-size: $fontSize + 4
-                margin-bottom: 30px
+                font-size: $fontSize * 2 - 2
+                color: $fontFifthColor
+                font-weight: normal
 
             +small-device
                 font-size: $fontSize * 2 - 10
 
         p
             font-size: $fontSize
+            color: $fontPrimaryColor
+            opacity: 0.74
             margin-bottom: 15px
 
+            &:first-of-type
+                font-size: $fontSize
+                font-weight: bold
+
             &:last-of-type
-                margin-bottom: 0
+                font-size: $fontSize - 4
+                margin-bottom: 30px
 
             +mobile
-                font-size: $fontSize - 4
+                font-size: $fontSize - 5
 
     .content
 
