@@ -840,7 +840,7 @@ section#servicios .contact .go-to {
 /* TEAM */
 section#equipo {
   background-color: #FFF;
-  padding: 90px;
+  padding: 90px 90px 60px;
 }
 @media (min-width: 993px) and (max-width: 1200) {
   section#equipo {
@@ -849,12 +849,12 @@ section#equipo {
 }
 @media (min-width: 768px) and (max-width: 992px) {
   section#equipo {
-    padding: 60px 90px;
+    padding: 60px 30px 45px;
   }
 }
 @media (max-width: 767px) {
   section#equipo {
-    padding: 0;
+    padding: 60px 30px 30px;
   }
 }
 section#equipo .title {
@@ -884,6 +884,12 @@ section#equipo .title {
 }
 section#equipo .member {
   align-items: center;
+  margin-bottom: 60px;
+}
+@media (max-width: 767px) {
+  section#equipo .member {
+    margin-bottom: 30px;
+  }
 }
 section#equipo .member:nth-of-type(2n+1) img {
   padding-right: 30px;
@@ -901,11 +907,8 @@ section#equipo .member:nth-of-type(2n) p {
     padding-right: 0;
   }
 }
-section#equipo .member:first-of-type {
-  margin-bottom: 60px;
-}
 @media (max-width: 767px) {
-  section#equipo .member:first-of-type {
+  section#equipo .member:last-of-type {
     margin-bottom: 0;
   }
 }
@@ -914,17 +917,12 @@ section#equipo .member .bio {
 }
 @media (min-width: 768px) and (max-width: 992px) {
   section#equipo .member .bio {
-    padding: 30px 50px;
+    padding: 30px 15px 0;
   }
 }
 @media (max-width: 767px) {
   section#equipo .member .bio {
-    padding: 30px 50px;
-  }
-}
-@media (max-width: 767px) {
-  section#equipo .member .bio:nth-last-child(2) {
-    margin-bottom: 30px;
+    padding: 30px 15px 0;
   }
 }
 section#equipo .member .bio .icon.vertical-line {
@@ -935,7 +933,7 @@ section#equipo .member .bio .icon.vertical-line {
 }
 @media (min-width: 768px) and (max-width: 992px) {
   section#equipo .member .bio .icon.vertical-line {
-    display: block;
+    display: none;
     left: 30px;
     padding: 45px;
     width: 3px;
@@ -945,10 +943,49 @@ section#equipo .member .bio .icon.vertical-line {
 }
 @media (max-width: 767px) {
   section#equipo .member .bio .icon.vertical-line {
-    display: block;
+    display: none;
     width: 2px;
     height: 81px;
     background-image: url(../../assets/icons/icon_vertical_line.svg);
+  }
+}
+section#equipo .member .bio a.icon {
+  display: flex;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 15px;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  section#equipo .member .bio a.icon {
+    margin-top: 0;
+    position: absolute;
+    top: 30px;
+    right: 0;
+  }
+}
+section#equipo .member .bio a.icon.ln {
+  width: 19px;
+  height: 18px;
+  background-image: url(../../assets/icons/icon_ln.svg);
+}
+section#equipo .member .bio span {
+  display: none;
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  section#equipo .member .bio span {
+    display: none;
+    font-size: 10px;
+    padding-left: 20px;
+    margin-top: 5px;
+  }
+}
+@media (max-width: 767px) {
+  section#equipo .member .bio span {
+    display: none;
+    font-size: 8px;
+    padding-left: 20px;
+    margin-top: 5px;
   }
 }
 section#equipo .member h3 {
@@ -978,7 +1015,7 @@ section#equipo .member h4 {
 }
 @media (max-width: 767px) {
   section#equipo .member h4 {
-    font-size: 18px;
+    font-size: 14px;
   }
 }
 section#equipo .member p {
@@ -994,41 +1031,10 @@ section#equipo .member p {
     font-size: 11px;
   }
 }
-section#equipo .member .icon {
-  display: flex;
-  background-size: contain;
-  background-repeat: no-repeat;
-  margin-top: 15px;
-  align-items: center;
-}
-section#equipo .member .icon.ln {
-  width: 100%;
-  height: 15px;
-  background-image: url(../../assets/icons/icon_ln.svg);
-}
-section#equipo .member .icon span {
-  display: none;
-}
-@media (min-width: 768px) and (max-width: 992px) {
-  section#equipo .member .icon span {
-    display: flex;
-    font-size: 10px;
-    padding-left: 20px;
-    margin-top: 5px;
-  }
-}
-@media (max-width: 767px) {
-  section#equipo .member .icon span {
-    display: flex;
-    font-size: 8px;
-    padding-left: 20px;
-    margin-top: 5px;
-  }
-}
 
 /* PROJECTS */
 section#proyectos {
-  background-color: #314D69;
+  background-color: #C8A98A;
   padding: 90px;
 }
 @media (min-width: 768px) and (max-width: 992px) {
@@ -1038,7 +1044,7 @@ section#proyectos {
 }
 @media (max-width: 767px) {
   section#proyectos {
-    padding: 60px 30px 60px;
+    padding: 60px 30px 30px;
   }
 }
 section#proyectos .title {
@@ -1054,7 +1060,7 @@ section#proyectos .title h2 {
   }
 }
 section#proyectos .project {
-  background-color: #314D69;
+  background-color: #C8A98A;
   margin: 0 auto;
 }
 @media (min-width: 768px) and (max-width: 992px) {
@@ -1072,7 +1078,7 @@ section#proyectos .project img {
   margin: 0 auto;
 }
 section#proyectos .project .data {
-  background-color: #314D69;
+  background-color: #C8A98A;
   padding: 0 30px;
 }
 section#proyectos .project .data .info {
@@ -1145,7 +1151,7 @@ section#contacto {
 }
 @media (min-width: 768px) and (max-width: 992px) {
   section#contacto {
-    padding: 60px;
+    padding: 60px 30px 45px;
   }
 }
 @media (max-width: 767px) {
