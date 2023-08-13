@@ -1257,7 +1257,7 @@ section#contacto .icon.ln {
 
 /* FOOTER */
 footer {
-  background-color: #C8A98A;
+  background-color: #E5E5E5;
   color: #FFF;
   display: flex;
   justify-content: space-between;
@@ -1267,7 +1267,7 @@ footer {
 @media (max-width: 767px) {
   footer {
     flex-direction: column;
-    padding: 75px 30px 45px;
+    padding: 75px 30px 30px;
   }
 }
 footer a {
@@ -1282,9 +1282,10 @@ footer a {
   footer a {
     width: 240px;
     height: 68px;
-    margin-bottom: 45px;
+    margin-bottom: 40px;
   }
 }
 footer p, footer p > span {
+  color: #313131;
   font-size: 11px;
 }/*# sourceMappingURL=main.css.map */
