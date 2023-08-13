@@ -83,7 +83,7 @@ section .title {
   }
 }
 section .title i {
-  display: block;
+  display: none;
   width: 60px;
   height: 1px;
   background-color: #5E6661;
@@ -1150,7 +1150,7 @@ section#contacto {
 }
 @media (max-width: 767px) {
   section#contacto {
-    padding: 60px 30px;
+    padding: 60px 30px 30px;
   }
 }
 section#contacto .title {
