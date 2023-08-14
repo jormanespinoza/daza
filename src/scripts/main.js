@@ -76,6 +76,16 @@ const doServicesSlider = () => {
   $('.current').text(1)
 }
 
+const setProjectsOverlay = () => {
+  $('.project').each(function() {
+    const image = $(this).find('img')
+    const overlay = $(this).find('.overlay')
+
+    overlay.width(image.width())
+    overlay.height(image.height())
+  })
+}
+
 let screenWidth = window.innerWidth > 0
   ? window.innerWidth 
   : screen.width
@@ -140,6 +150,8 @@ $(window).on('load', function () {
   $('.slider').on('afterChange', function(event, slick, direction) {
     $('.current').text(++direction)
   })
+
+  setProjectsOverlay()
 })
 
 $(window).on('resize', function() {
@@ -151,6 +163,8 @@ $(window).on('resize', function() {
     if ($slider.hasClass('slick-initialized')) {
       $slider.slick('unslick')
     }
+
     doServicesSlider()
+    setProjectsOverlay()
   }, 500)
 })
