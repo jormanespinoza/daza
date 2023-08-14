@@ -18,6 +18,7 @@ const browserMbbile =
 const hashValue = window.location.hash
 const mobile = 992
 const navbarHeight = 70
+const $slider = $('.slider')
 
 const getCurrentYear = () => new Date().getFullYear()
 
@@ -62,7 +63,6 @@ const onScroll = () =>  {
   })
 }
 
-let $slider = $('.slider');
 const doServicesSlider = () => {
   $slider.slick({
     autoplay: false,
@@ -78,11 +78,11 @@ const doServicesSlider = () => {
 
 const setProjectsOverlay = () => {
   $('.project').each(function() {
-    const image = $(this).find('img')
-    const overlay = $(this).find('.overlay')
+    const $image = $(this).find('img')
+    const $overlay = $(this).find('.overlay')
 
-    overlay.width(image.width())
-    overlay.height(image.height())
+    $overlay.width($image.width())
+    $overlay.height($image.height())
   })
 }
 
