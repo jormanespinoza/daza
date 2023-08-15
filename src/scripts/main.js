@@ -136,8 +136,9 @@ $(window).on('load', function () {
   // Scroll
   onScroll()
 
+  // Services trigger click of first element
   $('.item:first-of-type i').trigger('click')
-  
+
   setProjectsOverlay()
 })
 

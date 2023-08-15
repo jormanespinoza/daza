@@ -903,6 +903,7 @@ section#equipo .member .bio a.icon {
 section#equipo .member .bio a.icon.ln {
   width: 19px;
   height: 18px;
+  right: 15px;
   background-image: url(../../assets/icons/icon_ln.svg);
 }
 section#equipo .member .bio span {
