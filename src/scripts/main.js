@@ -136,10 +136,8 @@ $(window).on('load', function () {
   // Scroll
   onScroll()
 
-  $('.slider').on('afterChange', function(event, slick, direction) {
-    $('.current').text(++direction)
-  })
-
+  $('.item:first-of-type i').trigger('click')
+  
   setProjectsOverlay()
 })
 
