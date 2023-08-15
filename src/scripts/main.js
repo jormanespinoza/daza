@@ -18,7 +18,6 @@ const browserMbbile =
 const hashValue = window.location.hash
 const mobile = 992
 const navbarHeight = 70
-const $slider = $('.slider')
 
 const getCurrentYear = () => new Date().getFullYear()
 
@@ -61,19 +60,6 @@ const onScroll = () =>  {
 
     $(this).removeClass('active')
   })
-}
-
-const doServicesSlider = () => {
-  $slider.slick({
-    autoplay: false,
-    arrows: true,
-    speed: 500,
-    lazyLoad: 'ondemand',
-    infinite: true,
-    pauseOnHover: true,
-    slidesToShow: 1
-  });
-  $('.current').text(1)
 }
 
 const setProjectsOverlay = () => {
@@ -128,6 +114,12 @@ $(function() {
     })
   }
 
+  // Services collapse
+  $('.item i').click(function() {
+    $(this).parent().toggleClass('active');
+    $(this).siblings('p').slideToggle();
+  });
+
   // Footer | Current year
   $('.current-year').text(getCurrentYear())
 })
@@ -143,9 +135,6 @@ $(window).on('load', function () {
 
   // Scroll
   onScroll()
-
-  // Services - Slider
-  doServicesSlider()
 
   $('.slider').on('afterChange', function(event, slick, direction) {
     $('.current').text(++direction)
@@ -164,7 +153,6 @@ $(window).on('resize', function() {
       $slider.slick('unslick')
     }
 
-    doServicesSlider()
     setProjectsOverlay()
   }, 500)
 })

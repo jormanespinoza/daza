@@ -694,7 +694,7 @@ section#la-empresa .content .attributes .attribute h4 {
 }
 @media (max-width: 767px) {
   section#la-empresa .content .attributes .attribute h4 {
-    font-size: 28px;
+    font-size: 26px;
   }
 }
 section#la-empresa .content .attributes .attribute i {
@@ -708,72 +708,11 @@ section#la-empresa .content .attributes .attribute i {
 /* SERVICES */
 section#servicios .services {
   background-color: #314D69;
-}
-section#servicios .services .slider-container {
-  display: none;
-  position: relative;
+  padding: 90px;
 }
 @media (max-width: 767px) {
-  section#servicios .services .slider-container {
-    display: block;
-  }
-}
-section#servicios .services .slider-container .indicator {
-  position: absolute;
-  font-size: 13px;
-  font-weight: 300;
-  color: #FFF;
-  text-align: center;
-  left: 50%;
-  bottom: -60px;
-  transform: translateX(-50%);
-}
-section#servicios .services .slider-container .indicator .current {
-  font-weight: bold;
-}
-@media (max-width: 767px) {
-  section#servicios .services .slider {
-    display: flex;
-    margin-bottom: 120px;
-  }
-}
-section#servicios .row {
-  background-color: #314D69;
-  padding-left: 90px;
-  padding-right: 90px;
-}
-@media (min-width: 768px) and (max-width: 992px) {
-  section#servicios .row {
-    padding-left: 60px;
-    padding-right: 60px;
-  }
-}
-@media (max-width: 767px) {
-  section#servicios .row {
-    padding-left: 45px;
-    padding-right: 45px;
-  }
-}
-section#servicios .row:first-child {
-  padding-top: 90px;
-}
-@media (max-width: 767px) {
-  section#servicios .row:first-child {
-    padding-top: 60px;
-  }
-}
-section#servicios .row:last-child {
-  padding-bottom: 90px;
-}
-@media (max-width: 767px) {
-  section#servicios .row:last-child {
-    padding-top: 30px;
-    padding-bottom: 45px;
-  }
-}
-@media (max-width: 767px) {
-  section#servicios .row.items {
-    display: none;
+  section#servicios .services {
+    padding: 60px 45px;
   }
 }
 section#servicios .title {
@@ -790,68 +729,48 @@ section#servicios .title h2 {
   }
 }
 section#servicios .item {
-  margin-bottom: 90px;
+  border-bottom: 1px solid #FFF;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  width: 100%;
 }
-@media (max-width: 767px) {
-  section#servicios .item {
-    margin-bottom: 60px;
-  }
+section#servicios .item.active p {
+  padding-bottom: 15px;
 }
-@media (min-width: 768px) and (max-width: 992px) {
-  section#servicios .item:nth-child(3) p {
-    max-width: 260px;
-  }
+section#servicios .item.active i {
+  transform: rotate(90deg);
 }
-section#servicios h3 {
+section#servicios .item:last-of-type {
+  border: none;
+  margin-bottom: 45px;
+}
+section#servicios .item h3 {
   font-size: 20px;
-  font-weight: bold;
   color: #FFF;
-  text-align: center;
-  margin-bottom: 15px;
-}
-section#servicios p {
-  font-size: 14px;
-  color: #FFF;
-  text-align: center;
-  max-width: 290px;
-  margin-left: auto;
-  margin-right: auto;
-}
-section#servicios .icon {
-  display: block;
-  background-size: contain;
-  background-repeat: no-repeat;
-  margin: 0 auto 15px;
-}
-section#servicios .icon.coaching {
-  width: 48px;
-  height: 52px;
-  background-image: url(../../assets/icons/icon_coaching.svg);
-}
-section#servicios .icon.analytics {
-  width: 68px;
-  height: 48px;
-  background-image: url(../../assets/icons/icon_analytics.svg);
-}
-section#servicios .icon.studies {
-  width: 48px;
-  height: 52px;
-  background-image: url(../../assets/icons/icon_studies.svg);
-}
-section#servicios .icon.rates {
-  width: 68px;
-  height: 48px;
-  background-image: url(../../assets/icons/icon_rates.svg);
-}
-section#servicios .icon.project-manager {
-  width: 48px;
-  height: 52px;
-  background-image: url(../../assets/icons/icon_project_manager.svg);
 }
 @media (max-width: 767px) {
-  section#servicios .contact {
-    background-color: #314D69;
+  section#servicios .item h3 {
+    font-size: 13px;
   }
+}
+section#servicios .item p {
+  display: none;
+  font-size: 14px;
+  font-weight: 300;
+  color: #FFF;
+}
+@media (max-width: 767px) {
+  section#servicios .item p {
+    font-size: 11px;
+  }
+}
+section#servicios .item i {
+  display: block;
+  background: url(../../assets/icons/icon_right.svg) no-repeat center;
+  width: 13px;
+  height: 14px;
+  float: right;
+  transition: 0.5s ease;
 }
 
 /* TEAM */
