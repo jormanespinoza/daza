@@ -602,6 +602,11 @@ section#la-empresa .intro p:first-of-type {
   font-size: 16px;
   font-weight: bold;
 }
+@media (max-width: 767px) {
+  section#la-empresa .intro p:first-of-type {
+    font-size: 14px;
+  }
+}
 section#la-empresa .intro p:last-of-type {
   font-size: 12px;
   margin-bottom: 30px;
@@ -654,6 +659,12 @@ section#la-empresa .content .values p:first-of-type {
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 15px;
+}
+@media (max-width: 767px) {
+  section#la-empresa .content .values p:first-of-type {
+    max-width: 70%;
+    font-size: 14px;
+  }
 }
 section#la-empresa .content .values p:last-of-type {
   font-size: 12px;

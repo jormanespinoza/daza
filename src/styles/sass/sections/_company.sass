@@ -50,6 +50,9 @@ section#la-empresa
                 font-size: $fontSize
                 font-weight: bold
 
+                +mobile
+                    font-size: $fontSize - 2
+
             &:last-of-type
                 font-size: $fontSize - 4
                 margin-bottom: 30px
@@ -96,6 +99,10 @@ section#la-empresa
                     font-size: $fontSize 
                     font-weight: bold
                     margin-bottom: 15px
+
+                    +mobile
+                        max-width: 70%
+                        font-size: $fontSize - 2
 
                 &:last-of-type
                     font-size: $fontSize - 4
