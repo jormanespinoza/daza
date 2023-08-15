@@ -953,6 +953,7 @@ section#equipo .member h4 {
 @media (max-width: 767px) {
   section#equipo .member h4 {
     font-size: 14px;
+    margin-bottom: 20px;
   }
 }
 section#equipo .member p {
