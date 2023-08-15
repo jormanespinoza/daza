@@ -88,15 +88,18 @@ section
     .go-to
             display: table
             margin: 0 auto
-            background-color: $secondaryColor
-            color: $fontHighlightColor
-            padding: 2px 20px
+            background-color: $primaryColor
+            font-size: $fontSize - 4
+            color: $fontSecondaryColor
+            padding: 6px 30px
             border-radius: 20px
+
+            +tablet
+                font-size: $fontSize - 4
+                padding: 7px 40px
 
             +mobile
                 font-size: $fontSize - 5
-                background-color: $primaryColor
-                color: $fontSecondaryColor
                 padding: 7px 40px
 
 // Bootstrap

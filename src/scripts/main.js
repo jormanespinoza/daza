@@ -148,9 +148,6 @@ $(window).on('resize', function() {
     if (screenWidth <= mobile) {
       $('nav').removeClass('scrolled')
     }
-    if ($slider.hasClass('slick-initialized')) {
-      $slider.slick('unslick')
-    }
 
     setProjectsOverlay()
   }, 500)

@@ -8,7 +8,7 @@ section#la-empresa
 
         +tablet
             margin-left: 0
-            padding: 60px 60px
+            padding: 45px 0 45px 60px
 
         +mobile
             margin-left: 0
@@ -17,48 +17,63 @@ section#la-empresa
         .title
             justify-content: flex-start
 
+            +tablet
+                margin-bottom: 10px
+
             h2
                 color: $fontAccentColor
 
                 +mobile
                     text-align: left
 
-        h3
-            font-size: $fontSize * 2 + 6
-            color: $fontAccentColor
-            margin-bottom: 15px
+        .text
 
             +tablet
-                font-size: $fontSize * 2
-                color: $fontFifthColor
+                padding-right: 30px
 
-            +mobile
-                font-size: $fontSize * 2 - 2
-                color: $fontFifthColor
-                font-weight: normal
+            h3
+                font-size: $fontSize * 2 + 6
+                color: $fontAccentColor
+                margin-bottom: 15px
 
-            +small-device
-                font-size: $fontSize * 2 - 10
-
-        p
-            font-size: $fontSize
-            color: $fontPrimaryColor
-            opacity: 0.74
-            margin-bottom: 15px
-
-            &:first-of-type
-                font-size: $fontSize
-                font-weight: bold
+                +tablet
+                    font-size: $fontSize * 2 - 6
+                    color: $fontFifthColor
 
                 +mobile
-                    font-size: $fontSize - 2
+                    font-size: $fontSize * 2 - 2
+                    color: $fontFifthColor
+                    font-weight: normal
 
-            &:last-of-type
-                font-size: $fontSize - 4
-                margin-bottom: 30px
+                +small-device
+                    font-size: $fontSize * 2 - 10
 
-            +mobile
-                font-size: $fontSize - 5
+            p
+                font-size: $fontSize
+                color: $fontPrimaryColor
+                opacity: 0.74
+                margin-bottom: 15px
+
+                &:first-of-type
+                    font-size: $fontSize
+                    font-weight: bold
+
+                    +tablet
+                        font-size: $fontSize - 4
+
+                    +mobile
+                        font-size: $fontSize - 2
+
+                &:last-of-type
+                    font-size: $fontSize - 4
+                    margin-bottom: 30px
+
+                    +tablet
+                        font-size: $fontSize - 6
+
+                    +mobile
+                        font-size: $fontSize - 3
+
 
     .content
 
@@ -68,6 +83,9 @@ section#la-empresa
             text-align: left
             margin-bottom: 30px
 
+            +tablet
+                 margin-bottom: 15px
+
         .values
             background-color: $fourthColor
             padding: 90px
@@ -75,7 +93,7 @@ section#la-empresa
             +tablet
                 color: $fontSecondaryColor
                 font-size: $fontSize - 3
-                padding: 60px
+                padding: 45px 60px
 
             +mobile
                 color: $fontSecondaryColor
@@ -85,10 +103,14 @@ section#la-empresa
             h4
                 font-size: $fontSize + 6
                 color: $fontfourthColor
-                margin-bottom: 30px
+                margin-bottom: 0
+
+                +tablet
+                    font-size: $fontSize * 2 + 12
 
                 +mobile
                     font-size: $fontSize * 2 + 5
+                    margin-bottom: 30px
 
             p
                 font-size: $fontSize - 2
@@ -100,6 +122,10 @@ section#la-empresa
                     font-weight: bold
                     margin-bottom: 15px
 
+                    +tablet
+                        max-width: 75%
+                        font-size: $fontSize - 3
+
                     +mobile
                         max-width: 70%
                         font-size: $fontSize - 2
@@ -107,17 +133,21 @@ section#la-empresa
                 &:last-of-type
                     font-size: $fontSize - 4
 
-                +mobile
-                    font-size: $fontSize - 4
+                    +tablet
+                        font-size: $fontSize - 5
+                        max-width: 90%
+
+                    +mobile
+                        font-size: $fontSize - 4
 
         .attributes
             background: url(../../assets/images/attribures.jpg) no-repeat center
             background-size: cover
             position: relative
+            padding: 75px 45px 75px
 
             +tablet
                 font-size: $fontSize - 3
-                padding: 60px 45px 45px
 
             +mobile
                 padding: 60px 45px
@@ -131,18 +161,27 @@ section#la-empresa
                 background-color: rgba(0, 0, 0, 0.3)
 
             .attribute
+                border-right: 1px solid rgba($secondaryColor, .4)
+
+                &:last-of-type
+                    border: none
 
                 h4
                     font-size: $fontSize + 2
                     color: $fontSecondaryColor
                     text-align: center
+                    padding: 70px 0
+
 
                     +mobile
+                        padding: 0
                         font-size: $fontSize * 2 - 6
 
                 i
-                    display: block
-                    height: 1px
-                    width: 201px
-                    background-color: $secondaryColor
-                    margin: 30px auto 45px
+
+                    +mobile
+                        display: block
+                        height: 1px
+                        width: 201px
+                        background-color: rgba($secondaryColor, .4)
+                        margin: 30px auto 45px
