@@ -10,12 +10,37 @@ body
     overflow-x: hidden
     background-color: $secondaryColor
     color: $fontPrimaryColor
+    position: relative
 
     &.no-scroll
         height: 100vh
         width: 100vw
         overflow: hidden
 
+        .icon
+
+            &.whatsapp
+                display: none
+
+    .icon
+
+        &.whatsapp
+            display: block
+            background: url(../../assets/icons/icon_whatsapp.svg) no-repeat center
+            width: 83px
+            height: 83px
+            position: fixed
+            bottom: 15px
+            right: 15px
+            z-index: 1
+
+            +tablet
+                width: 55px
+                height: 55px
+
+            +mobile
+                width: 55px
+                height: 55px
 a
     color: $fontHighlightColor
     text-decoration: none
@@ -40,7 +65,7 @@ section
             margin-bottom: 15px
 
         i
-            display: block
+            display: none
             width: 60px
             height: 1px
             background-color: $tertiaryColor
@@ -61,6 +86,23 @@ section
             font-size: $fontSize - 3
             color: $fontAccentColor
             text-align: center
+
+    .go-to
+            display: table
+            margin: 0 auto
+            background-color: $primaryColor
+            font-size: $fontSize - 4
+            color: $fontSecondaryColor
+            padding: 6px 30px
+            border-radius: 20px
+
+            +tablet
+                font-size: $fontSize - 4
+                padding: 7px 40px
+
+            +mobile
+                font-size: $fontSize - 5
+                padding: 7px 40px
 
 // Bootstrap
 .no-gutter.row,

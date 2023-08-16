@@ -1,23 +1,26 @@
 /* TEAM */
 section#equipo
     background-color: $secondaryColor
-    padding: 90px
+    padding: 90px 90px 60px
 
     +desktop
-        padding: 60px
+        padding: 60px 0
 
     +tablet
-        padding: 60px 90px
+        padding: 45px 0 45px
 
     +mobile
-        padding: 0
+        padding: 60px 30px 30px
 
     .title
         justify-content: flex-start
 
+        +desktop
+            margin-bottom: 15px
+
         +tablet
-            justify-content: center
-            margin-bottom: 45px
+            justify-content: flex-start
+            margin-bottom: 15px
 
         +mobile
             justify-content: center
@@ -33,6 +36,10 @@ section#equipo
 
     .member
         align-items: center
+        margin-bottom: 60px
+
+        +mobile
+            margin-bottom: 30px
 
         &:nth-of-type(2n+1)
 
@@ -42,63 +49,40 @@ section#equipo
                 +mobile
                     padding-right: 0
 
+            .bio
+                padding-right: 45px
+                max-width: 900px
+
+                +tablet
+                    padding-right: 45px
+
         &:nth-of-type(2n)
 
-            p
-                padding-right: 30px
+            .bio
+                padding-left: 45px
+                padding-right: 45px
+
+                +tablet
+                    padding-left: 45px
+                    padding-right: 45px
 
                 +mobile
                     padding-right: 0
 
-        &:first-of-type
-            margin-bottom: 60px
-
-            +mobile
-                margin-bottom: 0
-
-        .bio
-            position: relative
-
-            +tablet
-                padding: 30px 50px
-
-            +mobile
-                padding: 30px 50px
-
-            &:nth-last-child(2)
-
-                +mobile
-                    margin-bottom: 30px
-
-            .icon
-
-                &.vertical-line
-                    display: none
-                    position: absolute
-                    top: -45px
-                    left: 35px
-
-                    +tablet
-                        display: block
-                        left: 30px
-                        padding: 45px
-                        width: 3px
-                        height: 45px
-                        background-image: url(../../assets/icons/icon_vertical_line.svg)
-
-                    +mobile
-                        display: block
-                        width: 2px
-                        height: 81px
-                        background-image: url(../../assets/icons/icon_vertical_line.svg)
+        &:last-of-type
+            margin-bottom: 0
 
         h3
             font-size: $fontSize * 2
             font-weight: bold
             margin-bottom: 10px
 
+            +desktop
+                font-size: $fontSize * 2 - 6
+                margin-bottom: 5px
+
             +tablet
-                font-size: $fontSize + 10
+                font-size: $fontSize + 4
                 margin-bottom: 5px
 
             +mobile
@@ -108,44 +92,60 @@ section#equipo
         h4
             font-size: $fontSize + 4
 
+            +desktop
+                font-size: $fontSize + 2
+
             +tablet
-                font-size: $fontSize + 3
+                font-size: $fontSize - 3
 
             +mobile
-                font-size: $fontSize + 2
+                font-size: $fontSize - 2
+                margin-bottom: 20px
 
         p
             font-size: $fontSize - 1
 
-            +tablet
+            +desktop
                 font-size: $fontSize - 2
+
+            +tablet
+                font-size: $fontSize - 5
 
             +mobile
                 font-size: $fontSize - 5
 
-        .icon
-            display: flex
-            background-size: contain
-            background-repeat: no-repeat
-            margin-top: 15px
-            align-items: center
+        .bio
+            position: relative
+            line-height: 1
 
-            &.ln
-                width: 100%
-                height: 15px
-                background-image: url(../../assets/icons/icon_ln.svg)
+            +tablet
+                padding: 0
 
-            span
-                display: none
+            +mobile
+                padding: 30px 15px 0
+
+            a.icon
+                display: flex
+                background-size: contain
+                background-repeat: no-repeat
+                margin-top: 15px
+                align-items: center
 
                 +tablet
-                    display: flex
-                    font-size: $fontSize - 6
-                    padding-left: 20px
                     margin-top: 5px
 
                 +mobile
-                    display: flex
-                    font-size: $fontSize - 8
-                    padding-left: 20px
-                    margin-top: 5px
+                    margin-top: 0
+                    position: absolute
+                    top: 30px
+                    right: 0
+
+                &.ln
+                    width: 19px
+                    height: 18px
+                    right: 15px
+                    background-image: url(../../assets/icons/icon_ln.svg)
+
+                    +tablet
+                        width: 16px
+                        height: 15px
