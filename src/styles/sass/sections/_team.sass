@@ -4,7 +4,7 @@ section#equipo
     padding: 90px 90px 60px
 
     +desktop
-        padding: 60px
+        padding: 60px 0
 
     +tablet
         padding: 45px 0 45px
@@ -14,6 +14,9 @@ section#equipo
 
     .title
         justify-content: flex-start
+
+        +desktop
+            margin-bottom: 15px
 
         +tablet
             justify-content: flex-start
@@ -74,6 +77,10 @@ section#equipo
             font-weight: bold
             margin-bottom: 10px
 
+            +desktop
+                font-size: $fontSize * 2 - 6
+                margin-bottom: 5px
+
             +tablet
                 font-size: $fontSize + 4
                 margin-bottom: 5px
@@ -85,6 +92,9 @@ section#equipo
         h4
             font-size: $fontSize + 4
 
+            +desktop
+                font-size: $fontSize + 2
+
             +tablet
                 font-size: $fontSize - 3
 
@@ -94,6 +104,9 @@ section#equipo
 
         p
             font-size: $fontSize - 1
+
+            +desktop
+                font-size: $fontSize - 2
 
             +tablet
                 font-size: $fontSize - 5
@@ -136,18 +149,3 @@ section#equipo
                     +tablet
                         width: 16px
                         height: 15px
-
-            span
-                display: none
-
-                +tablet
-                    display: none
-                    font-size: $fontSize - 6
-                    padding-left: 20px
-                    margin-top: 5px
-
-                +mobile
-                    display: none
-                    font-size: $fontSize - 8
-                    padding-left: 20px
-                    margin-top: 5px
