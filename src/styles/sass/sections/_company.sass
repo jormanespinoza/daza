@@ -1,10 +1,17 @@
 /* COMPANY */
 section#la-empresa
     background-color: $secondaryColor
+    margin-top: 115px
+
+    +tablet
+        margin-top: 0
+
+    +mobile
+        margin-top: 0
 
     .intro
         align-items: center
-        margin-left: 90px
+        padding: 45px 0 45px 90px
 
         +tablet
             margin-left: 0
@@ -33,7 +40,7 @@ section#la-empresa
 
             h3
                 font-size: $fontSize * 2 + 6
-                color: $fontAccentColor
+                color: $fontFifthColor
                 margin-bottom: 15px
 
                 +tablet
@@ -101,7 +108,7 @@ section#la-empresa
                 padding: 60px 45px
 
             h4
-                font-size: $fontSize + 6
+                font-size: $fontSize * 4
                 color: $fontfourthColor
                 margin-bottom: 0
 
@@ -144,9 +151,10 @@ section#la-empresa
             background: url(../../assets/images/attribures.jpg) no-repeat center
             background-size: cover
             position: relative
-            padding: 75px 45px 75px
+            padding: 120px 90px
 
             +tablet
+                padding: 75px 45px 75px
                 font-size: $fontSize - 3
 
             +mobile
@@ -167,11 +175,14 @@ section#la-empresa
                     border: none
 
                 h4
-                    font-size: $fontSize + 2
+                    font-size: $fontSize * 2 + 8
                     color: $fontSecondaryColor
                     text-align: center
-                    padding: 70px 0
+                    padding: 120px 0
 
+                    +tablet
+                        font-size: $fontSize + 2
+                        padding: 70px 0
 
                     +mobile
                         padding: 0

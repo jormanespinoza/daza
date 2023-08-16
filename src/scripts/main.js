@@ -34,7 +34,7 @@ const onScroll = () =>  {
   let headerHeight = $('header').height() - navbarHeight
 
   if (screenWidth > mobile) {
-    $(window).scrollTop() > headerHeight / 2.5
+    $(window).scrollTop() > 80
       ? $('nav').addClass('scrolled')
       : $('nav').removeClass('scrolled')
   } else {
@@ -44,7 +44,7 @@ const onScroll = () =>  {
   }
 
   $('nav ul li a').each(function () {
-    const anchorHref = $(this).attr('href');
+    const anchorHref = $(this).attr('href')
     if (!anchorHref) {
       return
     }
@@ -102,23 +102,35 @@ $(function() {
       return
     }
 
-    $(window).scrollTo(section, 1000, {
-      offset: getWindowUpset()
-    })
+    if (section.attr('id') == 'la-empresa' && screenWidth > mobile) {
+      $(window).scrollTo(section, 1000, {
+        offset: -110 -45
+      })
+    } else {
+      $(window).scrollTo(section, 1000, {
+        offset: getWindowUpset()
+      })
+    }
   })
 
   if (hashValue) {
     const section = $(hashValue)
-    $(window).scrollTo(section, 1000, {
-      offset: getWindowUpset()
-    })
+    if (hashValue == '#la-empresa' && screenWidth > mobile) {
+      $(window).scrollTo(section, 1000, {
+        offset: -110 -45
+      })
+    } else {
+      $(window).scrollTo(section, 1000, {
+        offset: getWindowUpset()
+      })
+    }
   }
 
   // Services collapse
   $('.item i').click(function() {
-    $(this).parent().toggleClass('active');
-    $(this).siblings('p').slideToggle();
-  });
+    $(this).parent().toggleClass('active')
+    $(this).siblings('p').slideToggle()
+  })
 
   // Footer | Current year
   $('.current-year').text(getCurrentYear())
@@ -137,7 +149,9 @@ $(window).on('load', function () {
   onScroll()
 
   // Services trigger click of first element
-  $('.item:first-of-type i').trigger('click')
+  if (screenWidth <= mobile) {
+    $('.item:first-of-type i').trigger('click')
+  }
 
   setProjectsOverlay()
 })

@@ -25,20 +25,22 @@ body
     .icon
 
         &.whatsapp
-            display: none
-            background-image: url(../../assets/icons/icon_whatsapp.svg)
-            width: 55px
-            height: 55px
+            display: block
+            background: url(../../assets/icons/icon_whatsapp.svg) no-repeat center
+            width: 83px
+            height: 83px
             position: fixed
             bottom: 15px
             right: 15px
             z-index: 1
 
             +tablet
-                display: block
+                width: 55px
+                height: 55px
 
             +mobile
-                display: block
+                width: 55px
+                height: 55px
 a
     color: $fontHighlightColor
     text-decoration: none

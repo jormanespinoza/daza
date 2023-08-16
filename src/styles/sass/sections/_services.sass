@@ -14,7 +14,7 @@ section#servicios
 
         h2
             color: $fontSecondaryColor
-            margin-bottom: 30px
+            margin-bottom: 10px
 
             +mobile
                 margin-bottom: 30px
@@ -27,6 +27,14 @@ section#servicios
         padding-top: 20px
         padding-bottom: 15px
         width: 100%
+        display: flex
+        justify-content: space-between
+
+        +tablet
+            display: block
+
+        +mobile
+            display: block
 
         &.active
 
@@ -35,6 +43,15 @@ section#servicios
 
             i
                 transform: rotate(90deg)
+
+        &:first-of-type
+            border-top: 1px solid $fontSecondaryColor
+
+            +tablet
+                border-top: none
+
+            +mobile
+                border-top: none
 
         &:last-of-type
             border: none
@@ -51,21 +68,30 @@ section#servicios
                 font-size: $fontSize - 3
 
         p
-            display: none
+            display: block
             font-size: $fontSize - 2
             font-weight: 300
             color: $fontSecondaryColor
+            width: 45%
 
             +tablet
+                display: none
                 font-size: $fontSize - 4
 
             +mobile
+                display: none
                 font-size: $fontSize - 5
 
         i
-            display: block
+            display: none
             background: url(../../assets/icons/icon_right.svg) no-repeat center
             width: 13px
             height: 14px
             float: right
             transition: $transition
+
+            +tablet
+                display: block
+
+            +mobile
+                display: block

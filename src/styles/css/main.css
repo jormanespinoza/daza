@@ -62,10 +62,10 @@ body.no-scroll .icon.whatsapp {
   display: none;
 }
 body .icon.whatsapp {
-  display: none;
-  background-image: url(../../assets/icons/icon_whatsapp.svg);
-  width: 55px;
-  height: 55px;
+  display: block;
+  background: url(../../assets/icons/icon_whatsapp.svg) no-repeat center;
+  width: 83px;
+  height: 83px;
   position: fixed;
   bottom: 15px;
   right: 15px;
@@ -73,12 +73,14 @@ body .icon.whatsapp {
 }
 @media (min-width: 768px) and (max-width: 992px) {
   body .icon.whatsapp {
-    display: block;
+    width: 55px;
+    height: 55px;
   }
 }
 @media (max-width: 767px) {
   body .icon.whatsapp {
-    display: block;
+    width: 55px;
+    height: 55px;
   }
 }
 
@@ -213,10 +215,23 @@ section .go-to {
 header {
   position: relative;
   width: 100%;
-  height: 100vh;
-  min-height: 600px;
+  height: 0;
   background: url("../../assets/images/hero_mobile.jpg") center/cover no-repeat;
   z-index: 1;
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  header {
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+  }
+}
+@media (max-width: 767px) {
+  header {
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+  }
 }
 header .overlay {
   position: absolute;
@@ -270,24 +285,28 @@ header nav {
   position: fixed;
   top: 0;
   width: 100%;
+  height: 115px;
+  background-color: #E5E5E5;
   transition: 0.5s ease;
 }
 @media (min-width: 768px) and (max-width: 992px) {
   header nav {
     position: relative;
+    height: auto;
   }
 }
 @media (max-width: 767px) {
   header nav {
     position: relative;
+    height: auto;
   }
 }
 header nav .logo {
   position: absolute;
   left: 60px;
-  top: 60px;
+  top: 25px;
   width: 256px;
-  height: 68px;
+  height: 67px;
   background-image: url(../../assets/icons/logo.svg);
   background-size: contain;
   background-repeat: no-repeat;
@@ -318,7 +337,7 @@ header nav .logo h1 {
 header nav ul {
   display: flex;
   width: 50%;
-  margin-top: 75px;
+  margin-top: 44px;
   margin-right: 60px;
   justify-content: space-between;
   float: right;
@@ -402,7 +421,7 @@ header nav .btn-menu-open.btn-menu-close i {
 }
 header nav.scrolled {
   height: 70px;
-  background-color: #C8A98A;
+  background-color: #E5E5E5;
 }
 header nav.scrolled .logo {
   width: 224px;
@@ -414,6 +433,7 @@ header nav.scrolled ul {
 }
 header nav.scrolled ul li > a {
   font-size: 13px;
+  color: #08110C;
 }
 @media (min-width: 768px) and (max-width: 992px) {
   header nav.scrolled {
@@ -551,10 +571,21 @@ header nav.open-mobile p {
 /* COMPANY */
 section#la-empresa {
   background-color: #FFF;
+  margin-top: 115px;
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  section#la-empresa {
+    margin-top: 0;
+  }
+}
+@media (max-width: 767px) {
+  section#la-empresa {
+    margin-top: 0;
+  }
 }
 section#la-empresa .intro {
   align-items: center;
-  margin-left: 90px;
+  padding: 45px 0 45px 90px;
 }
 @media (min-width: 768px) and (max-width: 992px) {
   section#la-empresa .intro {
@@ -591,7 +622,7 @@ section#la-empresa .intro .title h2 {
 }
 section#la-empresa .intro .text h3 {
   font-size: 38px;
-  color: #5E6661;
+  color: #CAAD8E;
   margin-bottom: 15px;
 }
 @media (min-width: 768px) and (max-width: 992px) {
@@ -676,7 +707,7 @@ section#la-empresa .content .values {
   }
 }
 section#la-empresa .content .values h4 {
-  font-size: 22px;
+  font-size: 64px;
   color: #C4C4C4;
   margin-bottom: 0;
 }
@@ -731,10 +762,11 @@ section#la-empresa .content .attributes {
   background: url(../../assets/images/attribures.jpg) no-repeat center;
   background-size: cover;
   position: relative;
-  padding: 75px 45px 75px;
+  padding: 120px 90px;
 }
 @media (min-width: 768px) and (max-width: 992px) {
   section#la-empresa .content .attributes {
+    padding: 75px 45px 75px;
     font-size: 13px;
   }
 }
@@ -758,10 +790,16 @@ section#la-empresa .content .attributes .attribute:last-of-type {
   border: none;
 }
 section#la-empresa .content .attributes .attribute h4 {
-  font-size: 18px;
+  font-size: 40px;
   color: #FFF;
   text-align: center;
-  padding: 70px 0;
+  padding: 120px 0;
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  section#la-empresa .content .attributes .attribute h4 {
+    font-size: 18px;
+    padding: 70px 0;
+  }
 }
 @media (max-width: 767px) {
   section#la-empresa .content .attributes .attribute h4 {
@@ -795,7 +833,7 @@ section#servicios .title {
 }
 section#servicios .title h2 {
   color: #FFF;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 @media (max-width: 767px) {
   section#servicios .title h2 {
@@ -812,12 +850,37 @@ section#servicios .item {
   padding-top: 20px;
   padding-bottom: 15px;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  section#servicios .item {
+    display: block;
+  }
+}
+@media (max-width: 767px) {
+  section#servicios .item {
+    display: block;
+  }
 }
 section#servicios .item.active p {
   padding-bottom: 15px;
 }
 section#servicios .item.active i {
   transform: rotate(90deg);
+}
+section#servicios .item:first-of-type {
+  border-top: 1px solid #FFF;
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  section#servicios .item:first-of-type {
+    border-top: none;
+  }
+}
+@media (max-width: 767px) {
+  section#servicios .item:first-of-type {
+    border-top: none;
+  }
 }
 section#servicios .item:last-of-type {
   border: none;
@@ -838,28 +901,41 @@ section#servicios .item h3 {
   }
 }
 section#servicios .item p {
-  display: none;
+  display: block;
   font-size: 14px;
   font-weight: 300;
   color: #FFF;
+  width: 45%;
 }
 @media (min-width: 768px) and (max-width: 992px) {
   section#servicios .item p {
+    display: none;
     font-size: 12px;
   }
 }
 @media (max-width: 767px) {
   section#servicios .item p {
+    display: none;
     font-size: 11px;
   }
 }
 section#servicios .item i {
-  display: block;
+  display: none;
   background: url(../../assets/icons/icon_right.svg) no-repeat center;
   width: 13px;
   height: 14px;
   float: right;
   transition: 0.5s ease;
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  section#servicios .item i {
+    display: block;
+  }
+}
+@media (max-width: 767px) {
+  section#servicios .item i {
+    display: block;
+  }
 }
 
 /* TEAM */
@@ -924,13 +1000,17 @@ section#equipo .member:nth-of-type(2n+1) img {
     padding-right: 0;
   }
 }
+section#equipo .member:nth-of-type(2n+1) .bio {
+  padding-right: 60px;
+}
 @media (min-width: 768px) and (max-width: 992px) {
   section#equipo .member:nth-of-type(2n+1) .bio {
     padding-right: 60px;
   }
 }
 section#equipo .member:nth-of-type(2n) .bio {
-  padding-right: 30px;
+  padding-left: 60px;
+  padding-right: 60px;
 }
 @media (min-width: 768px) and (max-width: 992px) {
   section#equipo .member:nth-of-type(2n) .bio {
@@ -1320,6 +1400,8 @@ footer {
   justify-content: space-between;
   align-items: center;
   padding: 30px 60px 30px 90px;
+  position: relative;
+  z-index: 1;
 }
 @media (max-width: 767px) {
   footer {
