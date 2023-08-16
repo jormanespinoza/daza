@@ -9,14 +9,17 @@ section#servicios
             padding: 60px 45px
 
     .title
-        display: block
+        display: flex
+        justify-content: flex-start
 
         h2
             color: $fontSecondaryColor
-            margin-bottom: 90px
+            margin-bottom: 30px
 
             +mobile
-                text-align: left
+                margin-bottom: 30px
+
+            +mobile
                 margin-bottom: 45px
 
     .item
@@ -41,6 +44,9 @@ section#servicios
             font-size: $fontSize + 4
             color: $fontSecondaryColor
 
+            +tablet
+                font-size: $fontSize - 2
+
             +mobile
                 font-size: $fontSize - 3
 
@@ -49,6 +55,9 @@ section#servicios
             font-size: $fontSize - 2
             font-weight: 300
             color: $fontSecondaryColor
+
+            +tablet
+                font-size: $fontSize - 4
 
             +mobile
                 font-size: $fontSize - 5

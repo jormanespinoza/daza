@@ -7,7 +7,7 @@ section#equipo
         padding: 60px
 
     +tablet
-        padding: 60px 30px 45px
+        padding: 45px 0 45px
 
     +mobile
         padding: 60px 30px 30px
@@ -16,8 +16,8 @@ section#equipo
         justify-content: flex-start
 
         +tablet
-            justify-content: center
-            margin-bottom: 45px
+            justify-content: flex-start
+            margin-bottom: 15px
 
         +mobile
             justify-content: center
@@ -46,10 +46,19 @@ section#equipo
                 +mobile
                     padding-right: 0
 
+            .bio
+
+                +tablet
+                    padding-right: 60px
+
         &:nth-of-type(2n)
 
-            p
+            .bio
                 padding-right: 30px
+
+                +tablet
+                    padding-left: 60px
+                    padding-right: 60px
 
                 +mobile
                     padding-right: 0
@@ -59,36 +68,47 @@ section#equipo
             +mobile
                 margin-bottom: 0
 
-        .bio
-            position: relative
+        h3
+            font-size: $fontSize * 2
+            font-weight: bold
+            margin-bottom: 10px
 
             +tablet
-                padding: 30px 15px 0
+                font-size: $fontSize + 4
+                margin-bottom: 5px
+
+            +mobile
+                font-size: $fontSize + 4
+                margin-bottom: 0
+
+        h4
+            font-size: $fontSize + 4
+
+            +tablet
+                font-size: $fontSize - 3
+
+            +mobile
+                font-size: $fontSize - 2
+                margin-bottom: 20px
+
+        p
+            font-size: $fontSize - 1
+
+            +tablet
+                font-size: $fontSize - 5
+
+            +mobile
+                font-size: $fontSize - 5
+
+        .bio
+            position: relative
+            line-height: 1
+
+            +tablet
+                padding: 0
 
             +mobile
                 padding: 30px 15px 0
-
-            .icon
-
-                &.vertical-line
-                    display: none
-                    position: absolute
-                    top: -45px
-                    left: 35px
-
-                    +tablet
-                        display: none
-                        left: 30px
-                        padding: 45px
-                        width: 3px
-                        height: 45px
-                        background-image: url(../../assets/icons/icon_vertical_line.svg)
-
-                    +mobile
-                        display: none
-                        width: 2px
-                        height: 81px
-                        background-image: url(../../assets/icons/icon_vertical_line.svg)
 
             a.icon
                 display: flex
@@ -96,6 +116,9 @@ section#equipo
                 background-repeat: no-repeat
                 margin-top: 15px
                 align-items: center
+
+                +tablet
+                    margin-top: 5px
 
                 +mobile
                     margin-top: 0
@@ -108,6 +131,10 @@ section#equipo
                     height: 18px
                     right: 15px
                     background-image: url(../../assets/icons/icon_ln.svg)
+
+                    +tablet
+                        width: 16px
+                        height: 15px
 
             span
                 display: none
@@ -123,35 +150,3 @@ section#equipo
                     font-size: $fontSize - 8
                     padding-left: 20px
                     margin-top: 5px
-
-        h3
-            font-size: $fontSize * 2
-            font-weight: bold
-            margin-bottom: 10px
-
-            +tablet
-                font-size: $fontSize + 10
-                margin-bottom: 5px
-
-            +mobile
-                font-size: $fontSize + 4
-                margin-bottom: 0
-
-        h4
-            font-size: $fontSize + 4
-
-            +tablet
-                font-size: $fontSize + 3
-
-            +mobile
-                font-size: $fontSize - 2 
-                margin-bottom: 20px
-
-        p
-            font-size: $fontSize - 1
-
-            +tablet
-                font-size: $fontSize - 2
-
-            +mobile
-                font-size: $fontSize - 5
