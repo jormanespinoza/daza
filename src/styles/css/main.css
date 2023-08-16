@@ -586,11 +586,11 @@ section#la-empresa {
 section#la-empresa .intro {
   align-items: center;
   padding: 45px 0 45px 90px;
+  padding: 45px 0 45px 60px;
 }
 @media (min-width: 768px) and (max-width: 992px) {
   section#la-empresa .intro {
     margin-left: 0;
-    padding: 45px 0 45px 60px;
   }
 }
 @media (max-width: 767px) {
@@ -1004,21 +1004,22 @@ section#equipo .member:nth-of-type(2n+1) img {
   }
 }
 section#equipo .member:nth-of-type(2n+1) .bio {
-  padding-right: 60px;
+  padding-right: 45px;
+  max-width: 900px;
 }
 @media (min-width: 768px) and (max-width: 992px) {
   section#equipo .member:nth-of-type(2n+1) .bio {
-    padding-right: 60px;
+    padding-right: 45px;
   }
 }
 section#equipo .member:nth-of-type(2n) .bio {
-  padding-left: 60px;
-  padding-right: 60px;
+  padding-left: 45px;
+  padding-right: 45px;
 }
 @media (min-width: 768px) and (max-width: 992px) {
   section#equipo .member:nth-of-type(2n) .bio {
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 45px;
+    padding-right: 45px;
   }
 }
 @media (max-width: 767px) {
@@ -1026,10 +1027,8 @@ section#equipo .member:nth-of-type(2n) .bio {
     padding-right: 0;
   }
 }
-@media (max-width: 767px) {
-  section#equipo .member:last-of-type {
-    margin-bottom: 0;
-  }
+section#equipo .member:last-of-type {
+  margin-bottom: 0;
 }
 section#equipo .member h3 {
   font-size: 32px;
