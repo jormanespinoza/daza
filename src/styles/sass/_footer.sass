@@ -1,15 +1,17 @@
 /* FOOTER */
 footer
-    background-color: $primaryColor
+    background-color: $fourthColor
     color: $fontSecondaryColor
     display: flex
     justify-content: space-between
     align-items: center
     padding: 30px 60px 30px 90px
+    position: relative
+    z-index: 1
 
     +mobile
         flex-direction: column
-        padding: 75px 30px 45px
+        padding: 75px 30px 30px
 
     a
         width: 224px
@@ -22,7 +24,9 @@ footer
         +mobile
             width: 240px
             height: 68px
-            margin-bottom: 45px
+            margin-bottom: 40px
 
     p, p > span
+        color: $fontPrimaryColor
         font-size: $fontSize - 5
+        font-weight: bold
