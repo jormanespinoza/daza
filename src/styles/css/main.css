@@ -1021,6 +1021,12 @@ section#equipo .member:nth-of-type(2n+1) .bio {
     padding-right: 45px;
   }
 }
+@media (max-width: 767px) {
+  section#equipo .member:nth-of-type(2n+1) .bio {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
 section#equipo .member:nth-of-type(2n) .bio {
   padding-left: 45px;
   padding-right: 45px;
@@ -1034,7 +1040,7 @@ section#equipo .member:nth-of-type(2n) .bio {
 @media (max-width: 767px) {
   section#equipo .member:nth-of-type(2n) .bio {
     padding-left: 15px;
-    padding-right: 45px;
+    padding-right: 15px;
   }
 }
 section#equipo .member:last-of-type {
