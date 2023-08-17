@@ -916,12 +916,14 @@ section#servicios .item p {
   section#servicios .item p {
     display: none;
     font-size: 12px;
+    width: 100%;
   }
 }
 @media (max-width: 767px) {
   section#servicios .item p {
     display: none;
     font-size: 11px;
+    width: 100%;
   }
 }
 section#servicios .item i {
