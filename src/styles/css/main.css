@@ -1033,6 +1033,7 @@ section#equipo .member:nth-of-type(2n) .bio {
 }
 @media (max-width: 767px) {
   section#equipo .member:nth-of-type(2n) .bio {
+    padding-left: 15px;
     padding-right: 0;
   }
 }
