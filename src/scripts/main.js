@@ -17,7 +17,7 @@ const browserMbbile =
 
 const hashValue = window.location.hash
 const mobile = 992
-const navbarHeight = 70
+const navbarHeight = 110
 
 const getCurrentYear = () => new Date().getFullYear()
 
@@ -34,7 +34,7 @@ const onScroll = () =>  {
   let headerHeight = $('header').height() - navbarHeight
 
   if (screenWidth > mobile) {
-    $(window).scrollTop() > 80
+    $(window).scrollTop() > 110
       ? $('nav').addClass('scrolled')
       : $('nav').removeClass('scrolled')
   } else {
@@ -51,8 +51,15 @@ const onScroll = () =>  {
 
     const section = $(this).attr('href')
     const refElement = $(section)
+    setTimeout(function () {
+      console.log(refElement.position().top, 'refElement.position().top')
+      console.log(scrollPosition, 'scrollPosition')
+      console.log(refElement.height(), 'refElement.height()')
+      console.log(refElement, 'refElement')
+    }, 1000)
 
-    if (refElement.position().top <= scrollPosition && refElement.position().top + refElement.height() > scrollPosition) {
+    if (refElement.position().top + navbarHeight <= scrollPosition 
+        && refElement.position().top + refElement.height() > scrollPosition) {
       $('nav ul li a').removeClass('active')
       $(this).addClass('active')
       return
@@ -104,7 +111,7 @@ $(function() {
 
     if (section.attr('id') == 'la-empresa' && screenWidth > mobile) {
       $(window).scrollTo(section, 1000, {
-        offset: -110 -45
+        offset: -45
       })
     } else {
       $(window).scrollTo(section, 1000, {
@@ -117,7 +124,7 @@ $(function() {
     const section = $(hashValue)
     if (hashValue == '#la-empresa' && screenWidth > mobile) {
       $(window).scrollTo(section, 1000, {
-        offset: -110 -45
+        offset: -110 - 45
       })
     } else {
       $(window).scrollTo(section, 1000, {

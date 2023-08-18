@@ -420,30 +420,7 @@ header nav .btn-menu-open.btn-menu-close i {
   background-repeat: no-repeat;
 }
 header nav.scrolled {
-  height: 70px;
   background-color: #E5E5E5;
-}
-header nav.scrolled .logo {
-  width: 224px;
-  height: 59px;
-  top: 6px;
-}
-header nav.scrolled ul {
-  margin-top: 20px;
-}
-header nav.scrolled ul li > a {
-  font-size: 13px;
-  color: #08110C;
-}
-@media (min-width: 768px) and (max-width: 992px) {
-  header nav.scrolled {
-    background-color: transparent;
-  }
-}
-@media (max-width: 767px) {
-  header nav.scrolled {
-    background-color: transparent;
-  }
 }
 header nav.scrolled .btn-menu-open {
   background-color: #E5E5E5;
