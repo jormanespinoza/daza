@@ -51,12 +51,6 @@ const onScroll = () =>  {
 
     const section = $(this).attr('href')
     const refElement = $(section)
-    setTimeout(function () {
-      console.log(refElement.position().top, 'refElement.position().top')
-      console.log(scrollPosition, 'scrollPosition')
-      console.log(refElement.height(), 'refElement.height()')
-      console.log(refElement, 'refElement')
-    }, 1000)
 
     if (refElement.position().top + navbarHeight <= scrollPosition 
         && refElement.position().top + refElement.height() > scrollPosition) {
