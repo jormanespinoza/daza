@@ -653,7 +653,7 @@ section#la-empresa .intro .text p {
   margin-bottom: 15px;
 }
 section#la-empresa .intro .text p:first-of-type {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
 }
 @media (min-width: 768px) and (max-width: 992px) {
@@ -667,7 +667,7 @@ section#la-empresa .intro .text p:first-of-type {
   }
 }
 section#la-empresa .intro .text p:last-of-type {
-  font-size: 12px;
+  font-size: 16px;
   margin-bottom: 30px;
 }
 @media (min-width: 768px) and (max-width: 992px) {
@@ -731,10 +731,10 @@ section#la-empresa .content .values p {
   opacity: 0.8;
 }
 section#la-empresa .content .values p:first-of-type {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
   margin-bottom: 15px;
-  max-width: 260px;
+  max-width: 280px;
 }
 @media (min-width: 768px) and (max-width: 992px) {
   section#la-empresa .content .values p:first-of-type {
@@ -749,7 +749,7 @@ section#la-empresa .content .values p:first-of-type {
   }
 }
 section#la-empresa .content .values p:last-of-type {
-  font-size: 14px;
+  font-size: 16px;
   max-width: 300px;
 }
 @media (min-width: 768px) and (max-width: 992px) {
@@ -907,7 +907,7 @@ section#servicios .item h3 {
 }
 section#servicios .item p {
   display: block;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 300;
   color: #FFF;
   width: 45%;
@@ -1090,6 +1090,7 @@ section#equipo .member h4 {
 }
 section#equipo .member p {
   font-size: 15px;
+  line-height: 1.5;
 }
 @media (min-width: 993px) and (max-width: 1200px) {
   section#equipo .member p {
