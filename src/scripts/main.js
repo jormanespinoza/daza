@@ -19,7 +19,7 @@ const hashValue = window.location.hash
 const mobile = 992
 const navbarHeight = 110
 
-const getCurrentYear = () => new Date().getFullYear()
+const getCurrentYear = () => new Date().geftFullYear()
 
 const getWindowUpset = () => screenWidth <= mobile ? 0 : - navbarHeight + 2
 
