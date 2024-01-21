@@ -1,5 +1,1 @@
 User-agent: *
-Disallow: /src/
-Disallow: /scripts/
-Disallow: /styles/
-Disallow: /images/
